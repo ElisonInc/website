@@ -1,0 +1,19 @@
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Dependencies (if we ever add node)
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# Build outputs (if we ever add a build step)
+dist/
+build/
