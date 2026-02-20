@@ -6,7 +6,7 @@ The flagship website for Elison Inc., showcasing the ecosystem of four interconn
 
 - **OneTime Studios** — Premium studio marketplace for booking and discovery
 - **DevHouse AI** — Enterprise automation systems  
-- **SplitSheet** — Legal infrastructure for music splits & agreements
+- **SongSplit** — Legal infrastructure for music splits & agreements
 - **ELISON** — Creative flagship (artist brand)
 
 ## Tech Stack
@@ -80,7 +80,7 @@ Can also be deployed to Vercel for higher performance:
 |---------|-------|-----|
 | Music (OneTime) | Indigo | `#6366f1` |
 | Tech (DevHouse) | Cyan | `#06b6d4` |
-| Legal (SplitSheet) | Green | `#10b981` |
+| Legal (SongSplit) | Green | `#10b981` |
 | Brand (ELISON) | Amber | `#f59e0b` |
 | Background | Black | `#0a0a0a` |
 
@@ -88,7 +88,7 @@ Can also be deployed to Vercel for higher performance:
 
 - **OneTime Studios**: https://onetime-studios.vercel.app
 - **DevHouse AI**: https://devhouse-ai-website.vercel.app
-- **SplitSheet**: https://splitsheet-app.vercel.app
+- **SongSplit**: https://app.songsplit.org
 - **Contact**: hello@elison.inc | partners@elison.inc
 
 ## License
