@@ -9,10 +9,10 @@ This repository contains the main ELISON INC website and acts as a map of the br
 | Product | Focus | Repository / product |
 | --- | --- | --- |
 | **DevHouse AI** | AI automation, voice AI, CRM workflows, booking, follow-up, and operational systems for service businesses | [Engineering portfolio](https://github.com/emorban/devhouse-ai) · [Live](https://www.devhouseai.com) |
+| **Eclipse AI** | Persistent agentic AI architecture exploring durable memory, tool capabilities, orchestration, verification, and safe automation | [Engineering portfolio](https://github.com/emorban/eclipse-ai) |
 | **OneTime Studios** | Recording-studio marketplace concept with discovery, auth, booking, payments, and owner workflows | [Repository](https://github.com/ElisonInc/onetime-studios) |
 | **SongSplit** | Music-tech collaboration workflow for ownership splits, agreement capture, and record integrity | [Repository](https://github.com/ElisonInc/songsplit-app) · [Live](https://songsplit.org) |
 | **Elison’s World** | Cinematic artist web experience and reusable creative-tech template | [Repository](https://github.com/emorban/elison-world-website) · [Live](https://elisonworld.com) |
-| **Eclipse Memory** | Historical persistent-agent prototype exploring memory, tool use, and orchestration | [Repository](https://github.com/emorban/eclipse-memory) |
 
 ## What this repository demonstrates
 
@@ -54,6 +54,7 @@ The site can be deployed as a static project through GitHub Pages or Vercel. No 
 ## Product links
 
 - **DevHouse AI:** https://www.devhouseai.com
+- **Eclipse AI:** https://github.com/emorban/eclipse-ai
 - **SongSplit:** https://songsplit.org
 - **Elison:** https://elisonworld.com
 - **Founder GitHub:** https://github.com/emorban
