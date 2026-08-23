@@ -1,18 +1,18 @@
-# ELISON INC
+# ELISON INC — Product Portfolio
 
 **ELISON INC** is the umbrella company behind a portfolio of products and experiments spanning AI systems, automation, music technology, marketplaces, and digital experiences.
 
-This repository contains the main ELISON INC website and acts as a map of the broader product portfolio.
+This repository contains the main ELISON INC website and acts as a map of the broader product portfolio. Project status is stated explicitly so production work, live products, public engineering artifacts, and prototypes are not presented as the same thing.
 
 ## Portfolio
 
-| Product | Focus | Repository / product |
-| --- | --- | --- |
-| **DevHouse AI** | AI automation, voice AI, CRM workflows, booking, follow-up, and operational systems for service businesses | [Engineering portfolio](https://github.com/emorban/devhouse-ai) · [Live](https://www.devhouseai.com) |
-| **Eclipse AI** | Persistent agentic AI architecture exploring durable memory, tool capabilities, orchestration, verification, and safe automation | [Engineering portfolio](https://github.com/emorban/eclipse-ai) |
-| **OneTime Studios** | Recording-studio marketplace concept with discovery, auth, booking, payments, and owner workflows | [Repository](https://github.com/ElisonInc/onetime-studios) |
-| **SongSplit** | Music-tech collaboration workflow for ownership splits, agreement capture, and record integrity | [Repository](https://github.com/ElisonInc/songsplit-app) · [Live](https://songsplit.org) |
-| **Elison’s World** | Cinematic artist web experience and reusable creative-tech template | [Repository](https://github.com/emorban/elison-world-website) · [Live](https://elisonworld.com) |
+| Product | Status | Focus | Repository / product |
+| --- | --- | --- | --- |
+| **DevHouse AI** | Product + sanitized engineering portfolio | AI automation, voice AI, CRM workflows, booking, follow-up, and operational systems for service businesses | [Engineering portfolio](https://github.com/emorban/devhouse-ai) · [Live](https://www.devhouseai.com) |
+| **Eclipse AI** | Sanitized public architecture portfolio | Persistent agentic AI architecture exploring durable memory, tool capabilities, orchestration, verification, and safe automation | [Engineering portfolio](https://github.com/emorban/eclipse-ai) |
+| **OneTime Studios** | Experimental marketplace prototype | Recording-studio marketplace concept with discovery, auth, booking, payments, and owner workflows | [Repository](https://github.com/ElisonInc/onetime-studios) |
+| **SongSplit** | Beta / portfolio product | Music-tech collaboration workflow for ownership splits, agreement capture, authorization, and record integrity | [Repository](https://github.com/ElisonInc/songsplit-app) · [Live](https://songsplit.org) |
+| **Elison’s World** | Live creative-tech product | Cinematic artist web experience and reusable creative-tech template | [Repository](https://github.com/emorban/elison-world-website) · [Live](https://elisonworld.com) |
 
 ## What this repository demonstrates
 
