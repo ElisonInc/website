@@ -47,14 +47,24 @@ python3 -m http.server 8000
 
 Then open `http://localhost:8000`.
 
+## Styles
+
+`styles.css` is compiled Tailwind CSS (v3) generated from the classes in `index.html`. After changing markup, rebuild and commit it:
+
+```bash
+npm install
+npm run build:css
+```
+
 ## Deployment
 
-The site can be deployed as a static project through GitHub Pages or Vercel. No application server or build pipeline is required for the current implementation.
+The site deploys as static files through GitHub Pages. `styles.css` is committed, so no build runs on deploy.
 
 ## Product links
 
 - **DevHouse AI:** https://www.devhouseai.com
 - **Eclipse AI:** https://github.com/emorban/eclipse-ai
+- **ShortHouse:** https://shorthouse.vercel.app
 - **SongSplit:** https://songsplit.org
 - **Elison:** https://elisonworld.com
 - **Founder GitHub:** https://github.com/emorban
