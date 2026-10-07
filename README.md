@@ -20,12 +20,10 @@ The ELISON INC site itself is intentionally lightweight. Its value is in brand s
 
 ## Tech stack
 
-- HTML5
-- Tailwind CSS
-- GSAP + ScrollTrigger
+- Plain HTML and hand-written CSS, no build step and no JavaScript
 - Responsive, mobile-first layout
-- Keyboard and reduced-motion accessibility considerations
-- Static deployment via GitHub Pages or Vercel
+- Keyboard focus styles and reduced-motion support
+- Static deployment via GitHub Pages at https://elisoninc.com
 
 ## Operating idea
 
@@ -49,22 +47,17 @@ Then open `http://localhost:8000`.
 
 ## Styles
 
-`styles.css` is compiled Tailwind CSS (v3) generated from the classes in `index.html`. After changing markup, rebuild and commit it:
-
-```bash
-npm install
-npm run build:css
-```
+`styles.css` is hand-written plain CSS. Edit it directly; there is no build step.
 
 ## Deployment
 
-The site deploys as static files through GitHub Pages. `styles.css` is committed, so no build runs on deploy.
+The site deploys as static files through GitHub Pages at https://elisoninc.com (see `CNAME`).
 
 ## Product links
 
 - **DevHouse AI:** https://www.devhouseai.com
 - **Eclipse AI:** https://github.com/emorban/eclipse-ai
-- **ShortHouse:** https://shorthouse.vercel.app
+- **ShortHouse:** https://shorthouse.app
 - **SongSplit:** https://songsplit.org
 - **Elison:** https://elisonworld.com
 - **Founder GitHub:** https://github.com/emorban
