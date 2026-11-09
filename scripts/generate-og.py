@@ -16,6 +16,7 @@ CARDS={
  'consulting':{'lines':[('Founder-led',91,INK),('technology consulting.',68,COPPER)],'subtitle':'Strategy, AI workflows, websites, and execution.','footer':'DISCOVERY CALLS  /  PAID STRATEGY  /  INFO@ELISONINC.COM'},
  'shorthouse':{'lines':[('ShortHouse',115,INK)],'subtitle':'Original vertical drama, built for mobile audiences.','footer':'B2 IN PRODUCTION  /  PLATFORM PRE-LAUNCH','label':'SHORTHOUSE  /  PROJECT STUDY'},
  'devhouse':{'lines':[('DevHouse',113,INK),('AI front office.',70,COPPER)],'subtitle':'Workflows for home-service contractors.','footer':'WEBSITES  /  BOOKING  /  CRM FOLLOW-UP  /  VOICE AI','label':'DEVHOUSE AI  /  PROJECT STUDY'},
+ 'production':{'lines':[('Commercials &',78,INK),('product videos.',83,COPPER)],'subtitle':'Creative production powered by Eclipse Studio.','footer':'BRAND FILMS  /  PRODUCT VIDEOS  /  SOCIAL CAMPAIGNS','label':'ELISON INC.  /  PRODUCTION'},
  'privacy':{'lines':[('Privacy &',100,INK),('contact data.',89,COPPER)],'subtitle':'How inquiries, bookings, and third parties are handled.','footer':'INQUIRIES ROUTE TO INFO@ELISONINC.COM'}
 }
 
