@@ -166,7 +166,6 @@ body.editorial-home {margin:0}
 .editorial-home .project-art.green{background:linear-gradient(0deg,rgba(5,16,17,.36),rgba(5,16,17,.2)),url("assets/devhouse-field-workflow.webp") center 54%/cover no-repeat}
 .editorial-home .project-art.rose{background:linear-gradient(0deg,rgba(18,8,17,.45),rgba(18,8,17,.12)),url("assets/elison-performance-art.jpg") center 50%/cover no-repeat}
 
-/* Distinct, equally visible routes for consulting and commercial production */
-.editorial-home .service-actions{display:flex;flex-direction:column;align-items:flex-start;gap:16px}
-.editorial-home .service-secondary{color:#f5f0e7;font:800 12px Arial,Helvetica,sans-serif;letter-spacing:.07em;text-decoration:none;border-bottom:1px solid rgba(245,240,231,.6);padding-bottom:7px}
-.editorial-home .service-secondary:hover{color:#d7a394;border-color:#d7a394}
+/* Discreet secondary capability under primary consulting offer. */
+.editorial-home .consult-side .production-aside{margin:20px 0 0;color:#bcb4ac;font-size:12px;line-height:1.6;max-width:330px}
+.editorial-home .consult-side .production-aside a{color:#e1c9ba;text-underline-offset:4px;text-decoration:underline}
