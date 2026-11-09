@@ -94,3 +94,15 @@ body.consulting-page::before,body.interior-page::before{display:none}
  .consulting-page .foot,.interior-page .foot{padding:25px 22px}
 }
 @media(prefers-reduced-motion:reduce){.consulting-page *, .interior-page *{transition:none!important;animation:none!important}}
+
+/* Authentic, responsibly labeled project imagery. */
+.interior-page .case-photo{margin:0 auto;max-width:1160px}
+.interior-page .case-photo img{display:block;width:100%;height:auto;max-height:575px;object-fit:cover;object-position:center;border:1px solid var(--i-line)}
+.interior-page .case-photo-vertical img{height:500px;object-position:50% 29%}
+.interior-page .case-photo figcaption{padding:13px 0;border-bottom:1px solid var(--i-line);font:700 11px Arial,Helvetica,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:var(--i-muted)}
+.interior-page .privacy-copy{max-width:780px}
+.interior-page .privacy-copy h2{font-size:clamp(27px,3.3vw,40px);margin:35px 0 12px}
+.interior-page .privacy-copy p,.interior-page .privacy-copy li{font-size:16px;color:var(--i-muted);line-height:1.75;margin-top:12px}
+.interior-page .privacy-copy a{text-decoration:underline;color:var(--i-accent)}
+.interior-page .privacy-copy ul{list-style:disc;padding-left:26px}
+@media(max-width:800px){.interior-page .case-photo-vertical img{height:390px;object-position:50% 26%}}
