@@ -3,6 +3,10 @@ const form = document.getElementById("inquiry-form");
 if (form) {
   const status = document.getElementById("inquiry-status");
   const button = form.querySelector('button[type="submit"]');
+  if (new URLSearchParams(window.location.search).get("service") === "video") {
+    const serviceSelect = form.querySelector("#client-service");
+    if (serviceSelect) serviceSelect.value = "Commercial or product video production — custom";
+  }
   form.addEventListener("submit", async (event) => {
     event.preventDefault();
     if (!form.reportValidity()) return;
