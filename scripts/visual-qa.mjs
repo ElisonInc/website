@@ -36,6 +36,20 @@ try {
   if (result.h1Count !== 1) failures.push(item.label + ": expected one H1");
   for (const img of result.images) if (!img.ok) failures.push(item.label + ": image not loaded " + img.src);
   await page.screenshot({ path: "qa-screenshots/" + item.label + ".png", fullPage: true });
+  if (item.label === "consulting-desktop") {
+    await page.route("https://formsubmit.co/ajax/info@elisoninc.com", async (route) => {
+      await route.fulfill({ status: 200, contentType: "application/json", headers: { "access-control-allow-origin": "*" }, body: '{"success":"true"}' });
+    });
+    await page.locator("#client-name").fill("Site QA");
+    await page.locator("#client-email").fill("qa@example.com");
+    await page.locator("#client-message").fill("Test only: simulated form submission, no real message sent.");
+    await page.locator("#inquiry-form button[type=submit]").click();
+    try {
+      await page.getByRole("status").getByText("Your inquiry was submitted", { exact: false }).waitFor({ timeout: 3500 });
+    } catch {
+      failures.push("consulting-desktop: simulated inquiry did not show a success message");
+    }
+  }
   console.log(item.label, JSON.stringify(result));
   await page.close();
  }
