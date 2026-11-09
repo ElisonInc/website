@@ -14,6 +14,8 @@ const checks = [
  { path: "/consulting.html", label: "consulting-desktop", width: 1440, height: 900 },
  { path: "/consulting.html", label: "consulting-mobile", width: 390, height: 844 },
  { path: "/case-study-shorthouse.html", label: "case-study-desktop", width: 1440, height: 900 },
+ { path: "/production.html", label: "production-desktop", width: 1440, height: 900 },
+ { path: "/production.html", label: "production-mobile", width: 390, height: 844 },
  { path: "/privacy.html", label: "privacy-mobile", width: 390, height: 844 }
 ];
 const failures = [];
