@@ -161,3 +161,7 @@ body.editorial-home {margin:0}
 
 .editorial-home .project-art.rose img{object-position:50% 48%;filter:brightness(.65) saturate(.82)}
 .editorial-home .project-art.rose strong{font-size:clamp(54px,5.3vw,86px);letter-spacing:-.07em}
+
+/* Independent background images avoid the flat-color fallback on WebKit/Chromium. */
+.editorial-home .project-art.green{background:linear-gradient(0deg,rgba(5,16,17,.36),rgba(5,16,17,.2)),url("assets/devhouse-field-workflow.webp") center 54%/cover no-repeat}
+.editorial-home .project-art.rose{background:linear-gradient(0deg,rgba(18,8,17,.45),rgba(18,8,17,.12)),url("assets/elison-performance-art.jpg") center 50%/cover no-repeat}
