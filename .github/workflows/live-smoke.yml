@@ -1,0 +1,33 @@
+name: Live site smoke test
+on:
+  workflow_run:
+    workflows: ["pages build and deployment"]
+    types: [completed]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  live-smoke:
+    if: ${{ github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success' }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Verify publicly served pages and image assets
+        shell: bash
+        run: |
+          set -euo pipefail
+          for file in "" "consulting.html" "case-study-shorthouse.html" "case-study-devhouse.html" "privacy.html" "sitemap.xml" "robots.txt" "assets/shorthouse-b2-still.jpg" "assets/devhouse-field-workflow.webp"; do
+            url="https://elisoninc.com/$file"
+            curl --fail --silent --show-error --location --retry 4 --retry-delay 3 --retry-connrefused --max-time 30 --output /dev/null "$url"
+            echo "OK $url"
+          done
+      - name: Confirm current homepage markers and inquiry endpoint
+        shell: bash
+        run: |
+          set -euo pipefail
+          curl --fail --silent --show-error --location --retry 3 --output /tmp/home.html https://elisoninc.com/
+          grep -q 'Independent thinking' /tmp/home.html
+          grep -q 'assets/shorthouse-b2-still.jpg' /tmp/home.html
+          curl --fail --silent --show-error --location --retry 3 --output /tmp/consult.html https://elisoninc.com/consulting.html
+          grep -q 'formsubmit.co/ajax/info@elisoninc.com' /tmp/consult.html
+          grep -q 'buy.stripe.com/4gM00j65Y10DdBye9mcwg03' /tmp/consult.html
+          echo "Live content markers verified"
