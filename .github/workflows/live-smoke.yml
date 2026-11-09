@@ -1,5 +1,7 @@
 name: Live site smoke test
 on:
+  push:
+    branches: [main]
   workflow_run:
     workflows: ["pages build and deployment"]
     types: [completed]
@@ -8,7 +10,7 @@ permissions:
   contents: read
 jobs:
   live-smoke:
-    if: ${{ github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success' }}
+    if: ${{ github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success' }}
     runs-on: ubuntu-latest
     steps:
       - name: Verify publicly served pages and image assets
@@ -24,7 +26,13 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          curl --fail --silent --show-error --location --retry 3 --output /tmp/home.html https://elisoninc.com/
+          for attempt in $(seq 1 18); do
+            curl --fail --silent --show-error --location --max-time 20 --output /tmp/home.html https://elisoninc.com/ || true
+            if grep -q 'editorial.css?v=20261109-4' /tmp/home.html 2>/dev/null; then break; fi
+            echo "Waiting for the new GitHub Pages release ($attempt/18)"
+            sleep 10
+          done
+          grep -q 'editorial.css?v=20261109-4' /tmp/home.html
           grep -q 'Independent thinking' /tmp/home.html
           grep -q 'assets/shorthouse-b2-still.jpg' /tmp/home.html
           curl --fail --silent --show-error --location --retry 3 --output /tmp/consult.html https://elisoninc.com/consulting.html
