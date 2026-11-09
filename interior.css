@@ -148,3 +148,7 @@ body.consulting-page::before,body.interior-page::before{display:none}
  .production-page .production-ribbon div{gap:11px 17px;justify-content:flex-start;font-size:11px}
  .production-page .production-hero-actions{align-items:flex-start;gap:17px;flex-direction:column}
 }
+
+/* Small creative production cross-reference without another sales panel. */
+.consulting-page .consulting-creative-note{font-size:14px;line-height:1.7;color:var(--i-muted);max-width:830px;margin:25px 0 0}
+.consulting-page .consulting-creative-note a{color:var(--i-accent);text-underline-offset:4px}
