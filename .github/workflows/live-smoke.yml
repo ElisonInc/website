@@ -17,7 +17,13 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          for file in "" "consulting.html" "case-study-shorthouse.html" "case-study-devhouse.html" "privacy.html" "sitemap.xml" "robots.txt" "assets/shorthouse-b2-still.jpg" "assets/devhouse-field-workflow.webp" "assets/og/og-home.jpg" "assets/og/og-consulting.jpg" "assets/og/og-shorthouse.jpg" "assets/og/og-devhouse.jpg" "assets/og/og-privacy.jpg"; do
+          for attempt in $(seq 1 24); do
+            if curl --fail --silent --show-error --location --max-time 20 --output /tmp/elison-production.html https://elisoninc.com/production.html 2>/dev/null && grep -q 'assets/og/og-production.jpg' /tmp/elison-production.html; then break; fi
+            echo "Waiting for commercial production page ($attempt/24)"
+            sleep 5
+          done
+          grep -q 'assets/og/og-production.jpg' /tmp/elison-production.html
+          for file in "" "consulting.html" "production.html" "case-study-shorthouse.html" "case-study-devhouse.html" "privacy.html" "sitemap.xml" "robots.txt" "assets/shorthouse-b2-still.jpg" "assets/devhouse-field-workflow.webp" "assets/og/og-home.jpg" "assets/og/og-consulting.jpg" "assets/og/og-shorthouse.jpg" "assets/og/og-devhouse.jpg" "assets/og/og-privacy.jpg" "assets/og/og-production.jpg"; do
             url="https://elisoninc.com/$file"
             curl --fail --silent --show-error --location --retry 4 --retry-delay 3 --retry-connrefused --max-time 30 --output /dev/null "$url"
             echo "OK $url"
@@ -45,4 +51,4 @@ jobs:
             curl --fail --silent --show-error --location --output /tmp/page.html "https://elisoninc.com/$page"
             grep -q "assets/og/$image" /tmp/page.html
           done
-          echo "Live content and all five OG assets verified"
+          echo "Live content, production services and all six OG assets verified"
