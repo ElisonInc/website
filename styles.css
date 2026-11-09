@@ -243,3 +243,34 @@ ul, ol { padding: 0; list-style: none; }
 @media (max-width:400px) {
  .bar nav {gap:.55rem;font-size:.8rem}
 }
+
+/* Readable navigation and conversion details */
+.bar-mark {flex-shrink:0}
+.bar nav {flex-wrap:wrap;justify-content:flex-end}
+.bar nav a {min-height:2.75rem;display:inline-flex;align-items:center}
+.hero-detail {font-size:1rem!important;color:var(--dust);margin-top:1.1rem!important}
+.work-label {color:var(--brass)!important;font-size:.9rem;margin-bottom:.8rem}
+.faq-list {max-width:53rem}
+.faq-list details {border-top:1px solid rgba(241,228,211,.2);padding:1.2rem 0}
+.faq-list details:last-child {border-bottom:1px solid rgba(241,228,211,.2)}
+.faq-list summary {cursor:pointer;font-size:1.25rem;font-weight:500;min-height:2.75rem;align-content:center}
+.faq-list details p {color:var(--dust);margin:.75rem 0 .4rem;max-width:45rem}
+.inquiry-grid {display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(2rem,5vw,5rem)}
+.inquiry-grid .go {overflow-wrap:anywhere}
+#inquiry-form {display:grid;gap:.55rem}
+#inquiry-form label {margin-top:.7rem;font-weight:500}
+#inquiry-form label span {color:var(--dust);font-size:.85rem}
+#inquiry-form input,#inquiry-form select,#inquiry-form textarea {width:100%;min-width:0;min-height:3rem;border:1px solid #80605a;background:var(--velvet);color:var(--bone);padding:.8rem;font:inherit;border-radius:0}
+#inquiry-form textarea {resize:vertical}
+#inquiry-form input::placeholder,#inquiry-form textarea::placeholder {color:var(--dust);opacity:1}
+#inquiry-form button {font:inherit;cursor:pointer;justify-self:start}
+#inquiry-form .form-note,#inquiry-status {font-size:.95rem;color:var(--dust);margin-top:.7rem}
+#inquiry-form .consulting-button {margin-top:.8rem}
+@media(max-width:760px) {
+ .bar {align-items:flex-start;gap:.5rem;position:relative}
+ .bar nav {gap:0 .8rem}
+ .inquiry-grid {grid-template-columns:1fr}
+ html {scroll-padding-top:1rem}
+ .consulting-hero {padding-top:3rem}
+}
+@media(prefers-reduced-motion:reduce) {html {scroll-behavior:auto}}
