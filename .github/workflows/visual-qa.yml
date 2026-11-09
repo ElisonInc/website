@@ -1,0 +1,33 @@
+name: Responsive visual QA
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  browser:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install test browser (not a production dependency)
+        run: |
+          npm install --no-save playwright@1.56.1
+          npx playwright install --with-deps chromium
+      - name: Start local static server
+        run: |
+          python3 -m http.server 8000 --bind 127.0.0.1 >/tmp/elison-server.log 2>&1 &
+          sleep 2
+      - name: Check visual layouts and take screenshots
+        run: node scripts/visual-qa.mjs
+      - name: Save screenshots
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: elison-responsive-screenshots
+          path: qa-screenshots/
+          retention-days: 7
