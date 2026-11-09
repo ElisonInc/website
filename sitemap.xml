@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://elisoninc.com/</loc>
-    <lastmod>2026-10-07</lastmod>
-  </url>
-  <url><loc>https://elisoninc.com/consulting.html</loc></url>
+<url><loc>https://elisoninc.com/</loc><lastmod>2026-11-09</lastmod></url>
+<url><loc>https://elisoninc.com/consulting.html</loc><lastmod>2026-11-09</lastmod></url>
+<url><loc>https://elisoninc.com/case-study-devhouse.html</loc><lastmod>2026-11-09</lastmod></url>
+<url><loc>https://elisoninc.com/case-study-shorthouse.html</loc><lastmod>2026-11-09</lastmod></url>
 </urlset>
