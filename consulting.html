@@ -18,7 +18,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;900&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css?v=20261109-3">
+<link rel="stylesheet" href="styles.css?v=20261109-4">
 </head>
 <body class="consulting-page">
 <a class="skip" href="#services">Skip to services</a>
@@ -98,22 +98,22 @@
 <div class="consulting-final-inner inquiry-grid"><div>
 <p class="eyebrow">Work with us</p><h2 id="inquire-title">What are you building?</h2>
 <p>Share the goal, the obstacle and what you need help deciding. A short description is enough to start.</p>
-<p class="consulting-small">This form prepares an email in your email app. Nothing is submitted automatically, and no appointment is booked.</p>
+<p class="consulting-small">Send a project inquiry directly. We review requests and respond when there is a potential fit. Submitting does not book an appointment.</p>
 <a class="go" href="mailto:info@elisoninc.com">Email directly: info@elisoninc.com</a>
 </div>
-<form id="inquiry-form">
+<form id="inquiry-form" action="https://formsubmit.co/ajax/info@elisoninc.com" method="POST">
 <label for="client-name">Your name <span>(required)</span></label><input id="client-name" name="name" autocomplete="name" maxlength="100" required>
 <label for="client-email">Email <span>(required)</span></label><input id="client-email" name="email" type="email" autocomplete="email" maxlength="180" required>
 <label for="client-company">Company or project</label><input id="client-company" name="company" autocomplete="organization" maxlength="160">
 <label for="client-service">What do you need?</label><select id="client-service" name="service"><option>Discovery call — free, 15 minutes</option><option>Strategy consultation — $200</option><option>Product roadmap — from $750</option><option>Development or ongoing advisory — custom</option></select>
 <label for="client-budget">Approximate project budget</label><select id="client-budget" name="budget"><option>Not sure yet</option><option>$200 consultation</option><option>$750–$2,500</option><option>$2,500–$10,000</option><option>$10,000+</option></select>
 <label for="client-message">Goal, challenge and timeline <span>(required)</span></label><textarea id="client-message" name="message" rows="5" maxlength="2000" required placeholder="What are you trying to accomplish, and by when?"></textarea>
-<p class="form-note">Avoid confidential or sensitive information. Your details are included only in the email you choose to send.</p>
-<button class="consulting-button" type="submit">Prepare inquiry email <span aria-hidden="true">↗</span></button>
+<input type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true" class="honey-field"><input type="hidden" name="_subject" value="Elison Inc. — New consulting inquiry"><input type="hidden" name="_captcha" value="true"><p class="form-note">Avoid confidential information. Your inquiry is processed by FormSubmit and forwarded to info@elisoninc.com.</p>
+<button class="consulting-button" type="submit">Send inquiry <span aria-hidden="true">↗</span></button>
 <p id="inquiry-status" role="status" aria-live="polite"></p>
 <noscript><p>JavaScript is disabled. Please use the direct email link and include your goal, budget and timeline.</p></noscript>
 </form></div></section>
 </main>
 <footer class="foot"><p>© 2026 Elison Inc. New York and Miami.</p><a href="index.html">Explore Elison Inc.</a><a href="https://github.com/emorban">Founder on GitHub</a></footer>
-<script src="inquiry.js?v=20261109-3" defer></script>
+<script src="inquiry.js?v=20261109-4" defer></script>
 </body></html>
