@@ -8,6 +8,7 @@ Production source for **[elisoninc.com](https://elisoninc.com)**, the independen
 | --- | --- |
 | `index.html` | Editorial homepage; flagship ventures, portfolio, R&D and founder |
 | `consulting.html` | Consulting scope, pricing, Calendly discovery, Stripe checkout and inquiry form |
+| `production.html` | Commercials, product videos, social ads and branded film production through Eclipse Studio |
 | `case-study-shorthouse.html` | ShortHouse platform and B2 production project study |
 | `case-study-devhouse.html` | DevHouse AI workflow product study |
 | `privacy.html` | Inquiry data handling and third-party services |
@@ -27,12 +28,14 @@ Branding deliberately uses editorial type, warm paper colors and minimal ornamen
 - **SongSplit** — beta.
 - **RiftHouseStudio** — games in development.
 - **OneTime Studios** — paused prototype.
-- **Eclipse AI / Eclipse Studio / Dreamline** — research and internal tools, not publicly available SaaS.
+- **Eclipse AI** — engineering and architecture research.
+- **Eclipse Studio** — internal creative production workflow for ShortHouse and commissioned commercials, product videos and branded content. Client production is quoted as a service, not offered as software.
 
 ## Lead capture and booking
 
 - The inquiry form in `consulting.html` submits via `inquiry.js` to FormSubmit and forwards to **info@elisoninc.com**. The receiving address must remain activated with FormSubmit.
-- Free discovery uses a **15-minute** Calendly event with limited Tuesday and Thursday availability; do not broaden the calendar without approval.
+- Free discovery uses a **15-minute** Calendly event with limited date-specific windows, maintained as a rolling 30-day schedule; do not enable recurring weekly availability or broaden the calendar without approval.
+- Commercial and product video production is quoted separately based on creative brief, number of deliverables, platform formats, usage rights and revisions.
 - The **$200** one-time strategy consultation uses a live Stripe Payment Link, with automatic tax calculation enabled. Paying **does not** reserve a meeting time; the confirmation asks the client to email for scheduling.
 - Stripe Tax collection depends on actual tax registrations in applicable jurisdictions. Do not claim registrations or tax collection without verification.
 - Never store Stripe or API secret keys in this repo.
