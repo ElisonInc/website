@@ -17,7 +17,7 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          for file in "" "consulting.html" "case-study-shorthouse.html" "case-study-devhouse.html" "privacy.html" "sitemap.xml" "robots.txt" "assets/shorthouse-b2-still.jpg" "assets/devhouse-field-workflow.webp"; do
+          for file in "" "consulting.html" "case-study-shorthouse.html" "case-study-devhouse.html" "privacy.html" "sitemap.xml" "robots.txt" "assets/shorthouse-b2-still.jpg" "assets/devhouse-field-workflow.webp" "assets/og/og-home.jpg" "assets/og/og-consulting.jpg" "assets/og/og-shorthouse.jpg" "assets/og/og-devhouse.jpg" "assets/og/og-privacy.jpg"; do
             url="https://elisoninc.com/$file"
             curl --fail --silent --show-error --location --retry 4 --retry-delay 3 --retry-connrefused --max-time 30 --output /dev/null "$url"
             echo "OK $url"
@@ -28,14 +28,21 @@ jobs:
           set -euo pipefail
           for attempt in $(seq 1 18); do
             curl --fail --silent --show-error --location --max-time 20 --output /tmp/home.html https://elisoninc.com/ || true
-            if grep -q 'editorial.css?v=20261109-4' /tmp/home.html 2>/dev/null; then break; fi
+            if grep -q 'assets/og/og-home.jpg' /tmp/home.html 2>/dev/null; then break; fi
             echo "Waiting for the new GitHub Pages release ($attempt/18)"
             sleep 10
           done
-          grep -q 'editorial.css?v=20261109-4' /tmp/home.html
+          grep -q 'assets/og/og-home.jpg' /tmp/home.html
           grep -q 'Independent thinking' /tmp/home.html
           grep -q 'assets/shorthouse-b2-still.jpg' /tmp/home.html
           curl --fail --silent --show-error --location --retry 3 --output /tmp/consult.html https://elisoninc.com/consulting.html
           grep -q 'formsubmit.co/ajax/info@elisoninc.com' /tmp/consult.html
           grep -q 'buy.stripe.com/4gM00j65Y10DdBye9mcwg03' /tmp/consult.html
-          echo "Live content markers verified"
+          grep -q 'assets/og/og-consulting.jpg' /tmp/consult.html
+          for pair in "case-study-shorthouse.html:og-shorthouse.jpg" "case-study-devhouse.html:og-devhouse.jpg" "privacy.html:og-privacy.jpg"; do
+            page="${pair%%:*}"
+            image="${pair#*:}"
+            curl --fail --silent --show-error --location --output /tmp/page.html "https://elisoninc.com/$page"
+            grep -q "assets/og/$image" /tmp/page.html
+          done
+          echo "Live content and all five OG assets verified"
