@@ -4,7 +4,7 @@ import fs from "node:fs";
 import path from "node:path";
 
 const root = process.cwd();
-const pages = ["index.html", "consulting.html", "case-study-devhouse.html", "case-study-shorthouse.html", "privacy.html", "404.html"];
+const pages = ["index.html", "consulting.html", "case-study-devhouse.html", "case-study-shorthouse.html", "privacy.html", "production.html", "404.html"];
 const indexable = pages.filter((p) => p !== "404.html");
 const issues = [];
 const source = Object.fromEntries(pages.map((name) => [name, fs.readFileSync(path.join(root, name), "utf8")]));
@@ -55,6 +55,7 @@ if (!consult.includes("interior.css")) fail("Consulting stylesheet missing");
 if (!fs.existsSync("assets/shorthouse-b2-still.jpg")) fail("B2 image missing");
 if (!fs.existsSync("assets/devhouse-field-workflow.webp")) fail("DevHouse image missing");
 if (!fs.existsSync("assets/elison-performance-art.jpg")) fail("ELISON artwork missing");
+if (!fs.existsSync("assets/og/og-production.jpg")) fail("Production OG image missing");
 if (!fs.existsSync("inquiry.js")) fail("Inquiry handler missing");
 if (!fs.readFileSync("robots.txt", "utf8").includes("https://elisoninc.com/sitemap.xml")) fail("Robots sitemap reference missing");
 if (issues.length) { console.error("Site QA failed:\n" + issues.map(x => " - " + x).join("\n")); process.exitCode = 1; }
