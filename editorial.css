@@ -153,3 +153,8 @@ body.editorial-home {margin:0}
 .editorial-home .project-art.green strong{font-size:clamp(45px,4.7vw,68px);letter-spacing:-.08em}
 @media(max-width:800px){.editorial-home .show-art strong{font-size:150px}}
 @media(max-width:390px){.editorial-home .show-art strong{font-size:123px}}
+
+/* Keep photographs above card backgrounds and beneath caption overlays. */
+.editorial-home .show-art,.editorial-home .project-art{isolation:isolate}
+.editorial-home .show-art img,.editorial-home .project-art img{z-index:0}
+.editorial-home .show-art::after,.editorial-home .project-art::after{z-index:1}
