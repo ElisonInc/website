@@ -1,41 +1,41 @@
-# ELISON INC — Product Portfolio
+# Elison Inc. — Website
 
-**ELISON INC** is the umbrella company behind a portfolio of products and experiments spanning AI systems, automation, music technology, marketplaces, and digital experiences.
+Production source for **[elisoninc.com](https://elisoninc.com)**, the independent creative and technology company portfolio and consulting site.
 
-This repository contains the main ELISON INC website and acts as a map of the broader product portfolio. Project status is stated explicitly so production work, live products, public engineering artifacts, and prototypes are not presented as the same thing.
+## Site map
 
-## Portfolio
+| Page | Purpose |
+| --- | --- |
+| `index.html` | Editorial homepage; flagship ventures, portfolio, R&D and founder |
+| `consulting.html` | Consulting scope, pricing, Calendly discovery, Stripe checkout and inquiry form |
+| `case-study-shorthouse.html` | ShortHouse platform and B2 production project study |
+| `case-study-devhouse.html` | DevHouse AI workflow product study |
+| `privacy.html` | Inquiry data handling and third-party services |
+| `404.html` | Not-found page |
 
-| Product | Status | Focus | Repository / product |
-| --- | --- | --- | --- |
-| **DevHouse AI** | Product + sanitized engineering portfolio | AI automation, voice AI, CRM workflows, booking, follow-up, and operational systems for service businesses | [Engineering portfolio](https://github.com/emorban/devhouse-ai) · [Live](https://www.devhouseai.com) |
-| **Eclipse AI** | Sanitized public architecture portfolio | Persistent agentic AI architecture exploring durable memory, tool capabilities, orchestration, verification, and safe automation | [Engineering portfolio](https://github.com/emorban/eclipse-ai) |
-| **OneTime Studios** | Experimental marketplace prototype | Recording-studio marketplace concept with discovery, auth, booking, payments, and owner workflows | [Repository](https://github.com/ElisonInc/onetime-studios) |
-| **SongSplit** | Beta / portfolio product | Music-tech collaboration workflow for ownership splits, agreement capture, authorization, and record integrity | [Repository](https://github.com/ElisonInc/songsplit-app) · [Live](https://songsplit.org) |
-| **Elison’s World** | Live creative-tech product | Cinematic artist web experience and reusable creative-tech template | [Repository](https://github.com/emorban/elison-world-website) · [Live](https://elisonworld.com) |
+## Stack
 
-## What this repository demonstrates
+Static HTML, CSS and a small vanilla-JavaScript inquiry handler. Hosted on GitHub Pages with `CNAME` for `elisoninc.com`; no JavaScript framework, build tool or custom backend. Homepage uses `editorial.css`; the consulting and project pages use `interior.css` with legacy shared styles in `styles.css`.
 
-The ELISON INC site itself is intentionally lightweight. Its value is in brand storytelling, responsive interaction, accessibility considerations, and presenting a coherent product ecosystem rather than acting as another large application.
+Branding deliberately uses editorial type, warm paper colors and minimal ornamentation. Homepage project images are sourced from our original ShortHouse and DevHouse AI asset folders. These are representative artwork **not** examples of delivered client results.
 
-## Tech stack
+## Business and project status
 
-- Plain HTML and hand-written CSS, no build step and no JavaScript
-- Responsive, mobile-first layout
-- Keyboard focus styles and reduced-motion support
-- Static deployment via GitHub Pages at https://elisoninc.com
+- **ShortHouse / B2** — platform in precommercial launch preparation; B2 is in production. Do not call it streaming or published without release approval.
+- **DevHouse AI** — consulting-facing product; do not invent case-study metrics or testimonials.
+- **ELISON / The Book of Eli** — independent music and film.
+- **SongSplit** — beta.
+- **RiftHouseStudio** — games in development.
+- **OneTime Studios** — paused prototype.
+- **Eclipse AI / Eclipse Studio / Dreamline** — research and internal tools, not publicly available SaaS.
 
-## Operating idea
+## Lead capture and booking
 
-The projects under ELISON INC are built around one recurring pattern:
-
-1. identify a real workflow, coordination, or creative problem
-2. model the product around the actual user and operator behavior
-3. define the system boundaries and source of truth
-4. use modern software and AI tooling to move from concept to working product quickly
-5. test the real path and separate prototypes from production-ready systems
-
-The portfolio intentionally includes projects at different stages. Repositories are explicit about whether something is a production product, a prototype, a historical experiment, or a portfolio artifact.
+- The inquiry form in `consulting.html` submits via `inquiry.js` to FormSubmit and forwards to **info@elisoninc.com**. The receiving address must remain activated with FormSubmit.
+- Free discovery uses a **15-minute** Calendly event with limited Tuesday and Thursday availability; do not broaden the calendar without approval.
+- The **$200** one-time strategy consultation uses a live Stripe Payment Link, with automatic tax calculation enabled. Paying **does not** reserve a meeting time; the confirmation asks the client to email for scheduling.
+- Stripe Tax collection depends on actual tax registrations in applicable jurisdictions. Do not claim registrations or tax collection without verification.
+- Never store Stripe or API secret keys in this repo.
 
 ## Local development
 
@@ -43,29 +43,24 @@ The portfolio intentionally includes projects at different stages. Repositories 
 python3 -m http.server 8000
 ```
 
-Then open `http://localhost:8000`.
+Visit `http://localhost:8000` in a browser.
 
-## Styles
+Run dependency-free static checks:
 
-`styles.css` is hand-written plain CSS. Edit it directly; there is no build step.
+```bash
+node scripts/check-site.mjs
+```
 
-## Deployment
+The `.github/workflows/site-qa.yml` workflow also runs these checks on pushes and pull requests. Run a browser-based responsive and keyboard test after visible design changes; the static checker does not replace visual QA.
 
-The site deploys as static files through GitHub Pages at https://elisoninc.com (see `CNAME`).
+## Before calling a release complete
 
-## Product links
+1. Check the live deployed URL in desktop and mobile browsers and ensure assets load.
+2. Confirm the form submits and an actual inquiry reaches the inbox.
+3. Confirm discovery booking shows only approved available hours.
+4. Confirm Stripe payment link details and tax configuration, without creating an unnecessary live charge.
+5. Check the sitemap, metadata, no broken links, and Google Search Console indexing where access is available.
 
-- **DevHouse AI:** https://www.devhouseai.com
-- **Eclipse AI:** https://github.com/emorban/eclipse-ai
-- **ShortHouse:** https://shorthouse.app
-- **SongSplit:** https://songsplit.org
-- **Elison:** https://elisonworld.com
-- **Founder GitHub:** https://github.com/emorban
+## Ownership
 
-## Portfolio context
-
-ELISON INC is less about one technology stack than a consistent way of building: connect product judgment, systems design, implementation, testing, and commercial reality instead of treating software as isolated demos.
-
-## License
-
-© 2026 ELISON INC. All rights reserved unless otherwise noted in individual project repositories.
+© 2026 Elison Inc. All rights reserved unless otherwise noted in project repositories.
