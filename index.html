@@ -29,140 +29,95 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;900&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css?v=20261109-5">
+<link rel="stylesheet" href="styles.css?v=20261109-6">
+<link rel="stylesheet" href="editorial.css?v=20261109-1">
 </head>
-<body>
-<a class="skip" href="#top">Skip to main content</a>
-
-<header class="bar">
-  <a class="bar-mark" href="#top" aria-label="Elison Inc., back to top">Elison Inc.</a>
-  <nav aria-label="Sections">
-    <a href="consulting.html">Consulting</a>
-    <a href="#featured">Featured work</a><a href="#companies">Ventures</a>
-    <a href="#labs">Labs</a>
-    <a href="#founder">Founder</a>
-    <a href="#contact">Contact</a>
-  </nav>
+<body class="editorial-home">
+<a class="skip" href="#main">Skip to content</a>
+<header class="topbar">
+ <a class="brand" href="/" aria-label="Elison Inc. home">ELISON<b>•</b>INC.</a>
+ <nav class="topnav" aria-label="Main navigation">
+  <a href="#work">Work</a><a href="#ventures">Ventures</a><a href="#about">About</a>
+  <a class="nav-cta" href="consulting.html#inquire">Start a project ↗</a>
+ </nav>
 </header>
-
-<main id="top">
-  <section class="hero" aria-labelledby="hero-title">
-    <h1 id="hero-title" class="marquee">
-      <span class="line"><span>Elison</span></span>
-      <span class="line line-2"><span>Inc.</span></span>
-    </h1>
-    <p class="hero-kicker">Independent technology · Original media · Founder-led execution</p>
-    <div class="hero-body">
-      <div><p class="lede">We build the businesses, technology and stories we believe should exist. From AI products to original film, we turn ambitious ideas into real work — and help select founders do the same.</p><a class="consulting-hero-link" href="consulting.html">Explore technology consulting <span aria-hidden="true">↗</span></a></div>
-      <div class="playing">
-        <h2>What we’re building</h2>
-        <ul>
-          <li><a href="https://shorthouse.app/series/b2">B2 is in production for ShortHouse</a></li>
-          <li><a href="https://thebookofeli.world/prologue"><i>Déjame Perderme</i> is out now</a></li>
-          <li><a href="https://www.songsplit.org">SongSplit is open in beta</a></li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <section class="block consulting-teaser" aria-labelledby="consulting-intro-title">
-    <p class="block-title">Work with Elison Inc.</p>
-    <h2 id="consulting-intro-title">The strategy to build it.<br><em>The expertise to deliver it.</em></h2>
-    <p>Work directly with our founder on product direction, AI automation and software delivery. Start with a focused discovery call; larger projects are scoped and quoted before work begins.</p>
-    <div class="consulting-teaser-actions"><a class="consulting-button" href="consulting.html">View consulting services</a><a class="consulting-text-link" href="consulting.html#inquire">Send a project inquiry</a></div>
-  </section>
-
-  <section class="featured-work block" id="featured" aria-labelledby="featured-title">
-    <div class="feature-heading"><p class="block-title">Selected work / 01—03</p><h2 id="featured-title">Ideas in <em>motion.</em></h2><p>Original ventures and internal technology, shown at their actual stage of development.</p></div>
-    <div class="feature-grid">
-      <article class="feature-card feature-short">
-        <div class="feature-art short-art" aria-hidden="true"><span class="art-index">01 / ORIGINAL SERIES</span><strong>B<span>2</span></strong><span class="art-bottom">SHORT FORM / LONG SHADOWS</span></div>
-        <div class="feature-copy"><span class="feature-category">ShortHouse · Pre-launch</span><h3>Stories made for the phone.</h3><p>A vertical streaming platform built around original, cliffhanger-driven drama. B2 is in production as its first original series.</p><a href="case-study-shorthouse.html">Explore the platform and production approach</a></div>
-      </article>
-      <article class="feature-card feature-dev">
-        <div class="feature-art dev-art" aria-hidden="true"><span class="art-index">02 / AI OPERATIONS</span><div class="dev-glyph"><span>AVERY</span><i></i><i></i><i></i><i></i></div><span class="art-bottom">INQUIRY → QUALIFY → BOOK</span></div>
-        <div class="feature-copy"><span class="feature-category">DevHouse AI · Open for clients</span><h3>Make every inquiry count.</h3><p>Websites and an AI front-office concept for service businesses: customer intake, lead qualification and appointment workflows.</p><a href="case-study-devhouse.html">Explore the AI workflow</a></div>
-      </article>
-      <article class="feature-card feature-music">
-        <div class="feature-art music-art" aria-hidden="true"><span class="art-index">03 / MUSIC & FILM</span><strong>ELISON</strong><span class="art-bottom">THE BOOK OF ELI</span></div>
-        <div class="feature-copy"><span class="feature-category">ELISON · Independent artist</span><h3>One artist. An entire world.</h3><p>Music, film and direct-to-audience storytelling developed as an independent creative universe.</p><a href="https://thebookofeli.world">Enter The Book of Eli</a></div>
-      </article>
-    </div>
-  </section>
-  <section id="companies" class="block" aria-labelledby="companies-title">
-    <h2 id="companies-title" class="block-title">Other ventures and experiments</h2>
-    <ol class="bill" role="list">
-      
-      
-      
-      <li class="act">
-        <div class="act-head"><h3>SongSplit</h3><span class="leader" aria-hidden="true"></span><span class="status">Beta</span></div>
-        <p>A shared workflow for collaborators to record master and publishing splits, capture everyone's agreement and keep a tamper-evident record, before the session ends.</p>
-        <a class="go" href="https://www.songsplit.org">Start a session</a>
-      </li>
-      <li class="act">
-        <div class="act-head"><h3>RiftHouseStudio</h3><span class="leader" aria-hidden="true"></span><span class="status">In development</span></div>
-        <p>The gaming brand under Elison Inc., developing original Roblox experiences. Current projects include <i>CÓMETELO!</i>, a city-scale eating and growth game, and <i>Something’s Changed</i>, a psychological horror experience.</p>
-        <p class="venture-note">Games are in development; no public play link is available here yet.</p>
-      </li>
-      <li class="act">
-        <div class="act-head"><h3>OneTime Studios</h3><span class="leader" aria-hidden="true"></span><span class="status">Paused · Prototype</span></div>
-        <p>A recording-studio booking marketplace prototype. Development is currently paused.</p>
-        <a class="go" href="https://onetime-studios.vercel.app">See the prototype</a>
-      </li>
-    </ol>
-  </section>
-
-  <section id="labs" class="block" aria-labelledby="labs-title">
-    <h2 id="labs-title" class="block-title">Research &amp; production tools</h2>
-    <p class="block-note">Where ideas get tested before they become companies. Selected architecture and engineering documentation is public.</p>
-    <ul class="bill bill-small" role="list">
-      <li class="act">
-        <div class="act-head"><h3>Eclipse AI</h3><span class="leader" aria-hidden="true"></span><span class="status">Architecture portfolio</span></div>
-        <p>A persistent AI agent system exploring memory, tool use, multi-agent orchestration and safe local automation. The public repository documents its architecture and verification approach.</p>
-        <a class="go" href="https://github.com/emorban/eclipse-ai">View the architecture on GitHub</a>
-      </li>
-      <li class="act">
-        <div class="act-head"><h3>Eclipse Studio</h3><span class="leader" aria-hidden="true"></span><span class="status">Internal production</span></div>
-        <p>Elison Inc.’s AI-assisted production tooling for developing and assembling film and episodic work, including B2 for ShortHouse. It supports the production workflow and is not offered here as a public software product.</p>
-      </li>
-      <li class="act">
-        <div class="act-head"><h3>Dreamline</h3><span class="leader" aria-hidden="true"></span><span class="status">In development</span></div>
-        <p>An AI morning call for your dreams. It calls you when you wake up and turns what you dreamed into a private journal.</p>
-      </li>
-    </ul>
-  </section>
-
-  <section id="founder" class="block founder" aria-labelledby="founder-title">
-    <h2 id="founder-title" class="block-title">Founder</h2>
-    <div class="founder-grid">
-      <div class="founder-name">
-        <p class="name">Elison<br>Morban</p>
-        <p class="role">Founder and CEO, artist, product manager</p>
-      </div>
-      <div class="founder-bio">
-        <p>Elison is an artist first. At 18 he was on a stage on <i>La Banda</i>, cameras rolling, people watching. After that he kept writing songs behind the scenes, moved to Miami, and never stopped making things. The ideas kept coming faster than one outlet could hold, so he started building companies to give them somewhere to live.</p>
-        <p>To him, developing is a lot like singing: you create the same way you do when people are watching. You feel the room, hear what isn't working, and go again until it lands. That's why he loves building systems: the workflow, the boundaries, the parts nobody sees. It's also why he works as a product manager. He owns the strategy, the architecture and the acceptance criteria, then tests every release end to end until it actually works.</p>
-        <ul class="links" role="list">
-          <li><a href="https://github.com/emorban">GitHub</a></li>
-          <li><a href="https://instagram.com/elison.inc">Instagram</a></li>
-          <li><a href="https://instagram.com/elison.wav">Music on Instagram</a></li>
-          <li><a href="https://www.linkedin.com/in/elisonjmorban">LinkedIn</a></li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <section id="contact" class="block contact" aria-labelledby="contact-title">
-    <h2 id="contact-title" class="block-title">Contact</h2>
-    <p class="block-note">For paid consulting, product development, collaborations, press or partnerships, get in touch. <a href="consulting.html">See consulting services and starting rates</a>.</p>
-    <a class="mail" href="mailto:info@elisoninc.com">info@elisoninc.com</a>
-  </section>
+<main id="main">
+<section class="hero container" aria-labelledby="hero-title">
+ <div class="hero-top"><span>Independent technology &amp; creative ventures</span><span>New York / Miami</span></div>
+ <h1 class="masthead" id="hero-title">Elison<span class="inc"> Inc.</span></h1>
+ <div class="hero-content">
+  <div class="statement">
+   <span class="eyebrow">Creative company / Product studio</span>
+   <h2>Independent thinking.<br><em>Things that work.</em></h2>
+   <p>We build original businesses at the intersection of technology, media and culture—and help ambitious founders turn ideas into working products.</p>
+   <div class="actions"><a class="e-button" href="#work">Explore our work <span aria-hidden="true">↗</span></a><a class="e-text-link" href="consulting.html">Work with us ↗</a></div>
+  </div>
+  <aside class="showcase" aria-label="Featured production">
+   <div class="show-art"><small>SHORTHOUSE ORIGINAL</small><strong aria-hidden="true">B<span>2</span></strong><span class="bottom">IN PRODUCTION / VERTICAL DRAMA</span></div>
+   <div class="side-label">01 — Featured original</div>
+   <div class="show-caption"><b>ShortHouse / B2</b><span>Pre-launch / Film &amp; streaming</span></div>
+  </aside>
+ </div>
+</section>
+<section class="e-section container" id="work" aria-labelledby="work-title">
+ <div class="section-head"><span class="section-number">01 / Selected work</span><h2 id="work-title">Built with intent.<br><em>Owned by design.</em></h2></div>
+ <div class="projects">
+  <article class="project">
+   <span class="num">01 / MEDIA</span>
+   <div class="project-art dark" aria-hidden="true"><strong>SH</strong><span class="art-foot">SHORTHOUSE — ORIGINAL ENTERTAINMENT</span></div>
+   <div class="project-copy"><span class="project-tag">ShortHouse / Pre-launch</span><h3>Stories made for the way we watch.</h3><p>A vertical streaming platform for serialized, phone-first drama. B2 is currently in production as its first original series.</p><a href="case-study-shorthouse.html">Explore the project ↗</a></div>
+  </article>
+  <article class="project">
+   <span class="num">02 / TECHNOLOGY</span>
+   <div class="project-art green" aria-hidden="true"><strong>AVERY.</strong><span class="art-foot">DEVHOUSE AI — FRONT OFFICE WORKFLOWS</span></div>
+   <div class="project-copy"><span class="project-tag">DevHouse AI / Open for clients</span><h3>A more capable front office.</h3><p>Websites and AI-assisted customer intake, qualification and scheduling workflows for home-service businesses.</p><a href="case-study-devhouse.html">Explore the project ↗</a></div>
+  </article>
+  <article class="project">
+   <span class="num">03 / CULTURE</span>
+   <div class="project-art rose" aria-hidden="true"><strong>ELISON</strong><span class="art-foot">THE BOOK OF ELI — MUSIC &amp; FILM</span></div>
+   <div class="project-copy"><span class="project-tag">ELISON / Independent artist</span><h3>Music with a world of its own.</h3><p>Original music, film and immersive storytelling developed as an independent creative identity.</p><a href="https://thebookofeli.world">Enter the world ↗</a></div>
+  </article>
+ </div>
+</section>
+<section class="consult-band" aria-labelledby="consult-title">
+ <div class="container consult-wrap"><span class="section-number">02 / Consulting</span>
+  <h2 id="consult-title">Good ideas need<br><em>real execution.</em></h2>
+  <div class="consult-side"><p>Founder-led product strategy, AI workflow design and software development. Clear scope, direct communication and selective engagements.</p><a class="e-button" href="consulting.html">View services &amp; rates <span aria-hidden="true">↗</span></a></div>
+ </div>
+</section>
+<section class="e-section container" id="ventures" aria-labelledby="ventures-title">
+ <div class="section-head"><span class="section-number">03 / The portfolio</span><h2 id="ventures-title">Still building.<br><em>Always independent.</em></h2></div>
+ <div class="compact-list">
+  <div class="compact-item"><h3>SongSplit</h3><p>Session-based tools for documenting songwriting and recording ownership splits.</p><span class="state">Beta</span></div>
+  <div class="compact-item"><h3>RiftHouseStudio</h3><p>Original Roblox games in development, including CÓMETELO! and Something’s Changed.</p><span class="state">In development</span></div>
+  <div class="compact-item"><h3>OneTime Studios</h3><p>A recording-studio booking marketplace prototype.</p><span class="state">Paused</span></div>
+ </div>
+</section>
+<section class="e-section container" id="labs" aria-labelledby="labs-title">
+ <div class="section-head"><span class="section-number">04 / R&amp;D</span><h2 id="labs-title">The tools behind<br><em>the work.</em></h2></div>
+ <div class="compact-list">
+  <div class="compact-item"><h3>Eclipse AI</h3><p>Research and architecture for persistent agent systems, memory, orchestration and verification.</p><span class="state"><a href="https://github.com/emorban/eclipse-ai">Public architecture ↗</a></span></div>
+  <div class="compact-item"><h3>Eclipse Studio</h3><p>Internal AI-assisted film and episodic production tooling used in the ShortHouse workflow.</p><span class="state">Internal</span></div>
+  <div class="compact-item"><h3>Dreamline</h3><p>An experimental AI-assisted morning dream journal and call concept.</p><span class="state">In development</span></div>
+ </div>
+</section>
+<section class="e-section container" id="about" aria-labelledby="about-title">
+ <div class="founder-block">
+  <span class="section-number">05 / Founder</span>
+  <h2 id="about-title">Elison<br>Morban.</h2>
+  <div class="founder-copy">
+   <p>Artist, filmmaker and founder. Elison develops original ventures, creates music as ELISON, and builds the systems that support independent creative and commercial work.</p>
+   <p>His work brings together product strategy, software, creative production and operational thinking—with a focus on owning the work and making it sustainable.</p>
+   <div class="founder-links"><a href="https://github.com/emorban">GitHub ↗</a><a href="https://www.linkedin.com/in/elisonjmorban">LinkedIn ↗</a><a href="https://instagram.com/elison.inc">Instagram ↗</a></div>
+  </div>
+ </div>
+</section>
+<section class="e-section container" id="contact" aria-labelledby="contact-title">
+ <div class="contact-panel">
+  <div><span class="section-number">06 / Contact</span><h2 id="contact-title">Build something<br><em>worth owning.</em></h2><p>For consulting engagements, collaboration and serious business inquiries.</p></div>
+  <a class="e-button" href="consulting.html#inquire">Send a project inquiry <span aria-hidden="true">↗</span></a>
+ </div>
+</section>
 </main>
-
-<footer class="foot">
-  <p>© 2026 Elison Inc. New York and Miami.</p>
-  <a href="https://github.com/ElisonInc">Elison Inc. on GitHub</a>
-</footer>
-</body>
-</html>
+<footer class="e-footer"><span>© 2026 Elison Inc. / Independent by design</span><span>New York / Miami</span><a href="mailto:info@elisoninc.com">info@elisoninc.com ↗</a></footer>
+</body></html>
