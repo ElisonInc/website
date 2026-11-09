@@ -286,3 +286,57 @@ ul, ol { padding: 0; list-style: none; }
  .consulting-button {max-width:100%;white-space:normal;text-align:center}
  .consulting-steps h3 {line-height:1.2}
 }
+
+/* Desktop art direction: editorial stage, stronger hierarchy, tactile depth. */
+.honey-field { position:absolute!important;left:-10000px!important;width:1px!important;height:1px!important;opacity:0!important;pointer-events:none!important; }
+#inquiry-form button:disabled {opacity:.65;cursor:progress}
+@media (min-width: 1000px) {
+  :root { --wide: 88rem; --gutter: clamp(2.5rem,5vw,6rem); }
+  .bar {padding:1.2rem var(--gutter); border-bottom-color:rgba(217,170,79,.27)}
+  .bar-mark {font-size:1.65rem;letter-spacing:.025em}
+  .bar nav {gap:clamp(1.2rem,2.5vw,3rem)}
+  .hero {position:relative;isolation:isolate;padding-top:clamp(4rem,7vw,8rem);padding-bottom:7rem}
+  .hero::before {content:"";position:absolute;z-index:-1;top:3rem;right:2rem;width:min(60vw,45rem);height:min(55vw,45rem);border-radius:50%;background:radial-gradient(circle,rgba(193,122,57,.20),rgba(125,41,30,.09) 48%,transparent 72%);filter:blur(25px);pointer-events:none}
+  .hero::after {content:"ELISON INC.   /   INDEPENDENT BY DESIGN";display:block;padding-top:1.1rem;margin-top:4rem;border-top:1px solid rgba(217,170,79,.38);font:700 .82rem var(--display);letter-spacing:.22em;color:var(--brass)}
+  .marquee {font-size:clamp(10rem,19vw,21rem);letter-spacing:-.025em;filter:drop-shadow(0 15px 30px rgba(0,0,0,.17))}
+  .marquee .line-2 {padding-left:.72em}
+  .hero-body {grid-template-columns:minmax(0,1.4fr) minmax(0,.8fr);gap:clamp(5rem,9vw,10rem);margin-top:4rem}
+  .lede {font-size:clamp(1.65rem,2.2vw,2.35rem);max-width:43rem;line-height:1.33;letter-spacing:-.012em}
+  .playing {border:1px solid rgba(217,170,79,.33);padding:1.75rem 2rem 2rem;background:linear-gradient(145deg,rgba(241,228,211,.06),rgba(24,3,8,.12));box-shadow:0 22px 50px rgba(0,0,0,.17)}
+  .playing h2 {font-family:var(--display);font-size:1.4rem;letter-spacing:.08em;text-transform:uppercase;font-style:normal}
+  .playing li {padding:.65rem 0;border-bottom:1px solid rgba(241,228,211,.12)}
+  .playing li:last-child {border-bottom:0}
+  .block {padding-top:6rem;padding-bottom:6rem}
+  .consulting-teaser {background:linear-gradient(105deg,rgba(217,170,79,.10),transparent 65%);border:1px solid rgba(217,170,79,.24);padding:4.5rem 5rem;margin-bottom:3rem}
+  .consulting-teaser h2 {max-width:55rem;font-size:clamp(4.5rem,6.4vw,7.7rem);line-height:.94}
+  .consulting-teaser-actions {margin-top:2.5rem}
+  .consulting-button {transition:background .2s,border-color .2s,transform .2s;box-shadow:0 6px 22px rgba(0,0,0,.12)}
+  .consulting-button:hover {transform:translateY(-2px)}
+  .bill:not(.bill-small) {display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1.3rem;counter-reset:venture}
+  .bill:not(.bill-small) .act {position:relative;min-height:20rem;padding:2.5rem;border:1px solid rgba(217,170,79,.25);background:linear-gradient(145deg,rgba(241,228,211,.06),rgba(16,2,6,.17));transition:border-color .2s,transform .2s,background .2s}
+  .bill:not(.bill-small) .act:hover {border-color:rgba(217,170,79,.7);transform:translateY(-4px);background:linear-gradient(145deg,rgba(241,228,211,.09),rgba(16,2,6,.22))}
+  .bill:not(.bill-small) .act + .act {border-top:1px solid rgba(217,170,79,.25)}
+  .bill:not(.bill-small) .act-head {align-items:flex-start;flex-wrap:wrap}
+  .bill:not(.bill-small) .act h3 {font-size:clamp(3rem,4.3vw,5rem)}
+  .bill:not(.bill-small) .leader {display:none}
+  .bill:not(.bill-small) .status {margin-left:auto;font-size:.95rem}
+  .bill:not(.bill-small) .act p {max-width:37rem}
+  .bill-small {display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1.2rem}
+  .bill-small .act {padding:1.75rem;border-top:1px solid rgba(217,170,79,.35);background:rgba(0,0,0,.08)}
+  .bill-small .act + .act {border-top:1px solid rgba(217,170,79,.35)}
+  .bill-small .act-head {display:block}
+  .bill-small .leader {display:none}
+  .bill-small .status {display:block;margin-top:.7rem}
+  .founder-grid {grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+  .founder-name .name {font-size:clamp(6rem,9vw,10rem)}
+  .founder-bio {max-width:43rem;font-size:1.18rem}
+  .contact {padding-bottom:9rem}
+  .contact .mail {font-size:clamp(4rem,6.5vw,8rem)}
+  .consulting-hero {position:relative;padding-top:7rem;padding-bottom:7rem;background:radial-gradient(ellipse at 80% 20%,rgba(217,170,79,.13),transparent 45%)}
+  .consulting-hero h1 {font-size:clamp(7rem,12vw,12rem);letter-spacing:-.024em}
+  .consulting-service-grid {gap:1.25rem;background:none;border:0}
+  .consulting-service {border:1px solid rgba(217,170,79,.22);background:linear-gradient(135deg,rgba(241,228,211,.06),transparent)}
+  .consulting-rates {gap:1.25rem}
+  .consulting-rate {padding:2.5rem;background:rgba(0,0,0,.11);border-color:rgba(217,170,79,.3)}
+  .consulting-final {background:linear-gradient(120deg,#190509,#3a0d14)}
+}
