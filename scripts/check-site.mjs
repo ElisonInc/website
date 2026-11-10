@@ -66,5 +66,18 @@ if (!fs.existsSync("assets/og/og-production.jpg")) fail("Production OG image mis
 if (!fs.existsSync("inquiry.js")) fail("Inquiry handler missing");
 if (source["index.html"].includes("Dreamline")) fail("Superseded Dreamline listing returned to public website");
 if (!fs.readFileSync("robots.txt", "utf8").includes("https://elisoninc.com/sitemap.xml")) fail("Robots sitemap reference missing");
+
+// Catch common secret formats and private keys before changes reach the public site.
+const secretPatterns = [
+  /sk-(?:proj|live|test)-[A-Za-z0-9_-]{16,}/,
+  /gh[pous]_[A-Za-z0-9]{20,}/,
+  /AKIA[0-9A-Z]{16}/,
+  /-----BEGIN (?:RSA |EC |OPENSSH )?PRIVATE KEY-----/
+];
+for (const file of [...pages, "inquiry.js", "editorial.css", "interior.css", "styles.css"]) {
+  const content = fs.readFileSync(path.join(root, file), "utf8");
+  if (secretPatterns.some(re => re.test(content))) fail(file + ": possible credential exposed");
+}
+
 if (issues.length) { console.error("Site QA failed:\n" + issues.map(x => " - " + x).join("\n")); process.exitCode = 1; }
 else console.log("Site QA passed: " + pages.length + " pages, local links, sitemap, metadata, assets and conversion links.");
