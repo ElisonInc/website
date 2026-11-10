@@ -12,6 +12,7 @@ Production source for **[elisoninc.com](https://elisoninc.com)**, the independen
 | `case-study-shorthouse.html` | ShortHouse platform and B2 production project study |
 | `case-study-devhouse.html` | DevHouse AI workflow product study |
 | `privacy.html` | Inquiry data handling and third-party services |
+| `engagement.html` | Client information about inquiries, payments, cancellation, rights and AI-assisted work |
 | `404.html` | Not-found page |
 
 ## Stack
@@ -30,6 +31,15 @@ Branding deliberately uses editorial type, warm paper colors and minimal ornamen
 - **OneTime Studios** — paused prototype.
 - **Eclipse AI** — engineering and architecture research.
 - **Eclipse Studio** — internal creative production workflow for ShortHouse and commissioned commercials, product videos and branded content. Client production is quoted as a service, not offered as software.
+
+## Client protection and commercial terms
+
+- The public [Working Together](https://elisoninc.com/engagement.html) page explains pre-engagement expectations, privacy, revisions, payment, cancellation, IP rights and AI-assisted production. It is not an executed agreement.
+- Use the [client engagement checklist](docs/client-engagement-checklist.md) for every paid project. Have a qualified attorney review the actual master services agreement and statement of work.
+- No confidential client media, private customer data, passwords or credentials belong in this public repository or the inquiry form.
+- The inquiry form has a required, clearly labeled acknowledgment that it is not a booking and that sensitive material must not be submitted.
+- Static pages implement a limited meta-level Content Security Policy and referrer policy. **GitHub Pages does not provide us with configurable HTTP security response headers here**; verify site headers separately and assess edge hosting if stronger controls are required.
+- Do not claim compliance certification, enforceable liability limits, insurance coverage, trademark rights or signed client consent without actual evidence.
 
 ## Lead capture and booking
 
@@ -62,7 +72,8 @@ The `.github/workflows/site-qa.yml` workflow also runs these checks on pushes an
 2. Confirm the form submits and an actual inquiry reaches the inbox.
 3. Confirm discovery booking shows only approved available hours.
 4. Confirm Stripe payment link details and tax configuration, without creating an unnecessary live charge.
-5. Check the sitemap, metadata, no broken links, and Google Search Console indexing where access is available.
+5. Check the sitemap, metadata, no broken links, accessibility and Google Search Console indexing where access is available.
+6. Verify the public disclosure pages, obtain real signed project terms and confirm rights to all third-party and AI-assisted output before publishing client work.
 
 ## Ownership
 
