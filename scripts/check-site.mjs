@@ -4,7 +4,7 @@ import fs from "node:fs";
 import path from "node:path";
 
 const root = process.cwd();
-const pages = ["index.html", "consulting.html", "case-study-devhouse.html", "case-study-shorthouse.html", "privacy.html", "production.html", "404.html"];
+const pages = ["index.html", "consulting.html", "case-study-devhouse.html", "case-study-shorthouse.html", "privacy.html", "production.html", "engagement.html", "404.html"];
 const indexable = pages.filter((p) => p !== "404.html");
 const issues = [];
 const source = Object.fromEntries(pages.map((name) => [name, fs.readFileSync(path.join(root, name), "utf8")]));
@@ -18,6 +18,8 @@ for (const [name, html] of Object.entries(source)) {
   if (!/<html[^>]*\blang="en"/i.test(html)) fail(name + ": missing document language");
   if (!/<meta name="viewport"/i.test(html)) fail(name + ": missing viewport");
   if (!/<title>[^<]+<\/title>/i.test(html)) fail(name + ": missing page title");
+  if (!html.includes('http-equiv="Content-Security-Policy"')) fail(name + ": missing CSP meta");
+  if (!html.includes('name="referrer"')) fail(name + ": missing referrer policy");
   if (!/<meta name="description"/i.test(html) && name !== "404.html") fail(name + ": missing meta description");
   const idSet = new Set(matches(html, /\bid="([^"]+)"/g));
   const refs = matches(html, /(?:href|src)="([^"]+)"/g);
@@ -39,6 +41,9 @@ for (const [name, html] of Object.entries(source)) {
     fail(name + ": image missing alt attribute");
   if (indexable.includes(name)) {
     if (!html.includes('rel="canonical"')) fail(name + ": missing canonical");
+    if (!html.includes('property="og:image"')) fail(name + ": missing social preview");
+    if (!html.includes('name="twitter:image"')) fail(name + ": missing social preview for X");
+    if (!html.includes('href="engagement.html"') && name !== "engagement.html") fail(name + ": missing client information link");
     const loc = name === "index.html" ? "https://elisoninc.com/" : "https://elisoninc.com/" + name;
     if (!sitemap.includes("<loc>" + loc + "</loc>")) fail(name + ": absent from sitemap");
   }
@@ -47,6 +52,8 @@ for (const [name, html] of Object.entries(source)) {
   }
 }
 const consult = source["consulting.html"];
+if (!consult.includes('id="inquiry-ack"') || !consult.includes('required> <span>I understand')) fail("Inquiry acknowledgment control missing");
+if (!consult.includes('href="engagement.html"')) fail("Engagement information missing near consulting");
 if (!consult.includes("formsubmit.co/ajax/info@elisoninc.com")) fail("Lead form endpoint missing");
 if (!consult.includes("elison-inc-discovery-call")) fail("Calendly discovery link missing");
 if (!consult.includes("buy.stripe.com/4gM00j65Y10DdBye9mcwg03")) fail("Stripe checkout link missing");
@@ -57,6 +64,7 @@ if (!fs.existsSync("assets/devhouse-field-workflow.webp")) fail("DevHouse image 
 if (!fs.existsSync("assets/elison-performance-art.jpg")) fail("ELISON artwork missing");
 if (!fs.existsSync("assets/og/og-production.jpg")) fail("Production OG image missing");
 if (!fs.existsSync("inquiry.js")) fail("Inquiry handler missing");
+if (source["index.html"].includes("Dreamline")) fail("Superseded Dreamline listing returned to public website");
 if (!fs.readFileSync("robots.txt", "utf8").includes("https://elisoninc.com/sitemap.xml")) fail("Robots sitemap reference missing");
 if (issues.length) { console.error("Site QA failed:\n" + issues.map(x => " - " + x).join("\n")); process.exitCode = 1; }
 else console.log("Site QA passed: " + pages.length + " pages, local links, sitemap, metadata, assets and conversion links.");
