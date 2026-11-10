@@ -159,3 +159,10 @@ body.consulting-page::before,body.interior-page::before{display:none}
 .consulting-page #inquiry-form .consent-check{display:flex;align-items:flex-start;gap:11px;margin:12px 0 10px;font:400 13px/1.55 Arial,sans-serif;cursor:pointer}
 .consulting-page #inquiry-form .consent-check span{color:var(--i-ink)}
 .consulting-page #inquiry-form input[type="checkbox"]{flex:none;width:19px!important;min-width:19px!important;height:19px!important;min-height:19px!important;margin:0!important;padding:0!important;accent-color:var(--i-accent);background:transparent}
+
+/* WCAG 2.2: legible production text and comfortably sized footer links. */
+.production-page .production-art-copy .eyebrow,
+.production-page .production-art-copy h2 em {color:#f0c4af}
+.consulting-page .foot,.interior-page .foot {column-gap:16px;row-gap:6px;flex-wrap:wrap}
+.consulting-page .foot a,.interior-page .foot a{display:inline-flex;align-items:center;min-height:44px;padding:10px 6px;line-height:1.4}
+.consulting-page .foot a:focus-visible,.interior-page .foot a:focus-visible{outline:2px solid var(--i-accent);outline-offset:3px}
