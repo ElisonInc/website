@@ -21,7 +21,7 @@ jobs:
             sleep 5
           done
           grep -q 'assets/og/og-production.jpg' /tmp/elison-production.html
-          for file in "" "consulting.html" "production.html" "case-study-shorthouse.html" "case-study-devhouse.html" "privacy.html" "sitemap.xml" "robots.txt" "assets/shorthouse-b2-still.jpg" "assets/devhouse-field-workflow.webp" "assets/og/og-home.jpg" "assets/og/og-consulting.jpg" "assets/og/og-shorthouse.jpg" "assets/og/og-devhouse.jpg" "assets/og/og-privacy.jpg" "assets/og/og-production.jpg"; do
+          for file in "" "consulting.html" "engagement.html" "production.html" "case-study-shorthouse.html" "case-study-devhouse.html" "privacy.html" "sitemap.xml" "robots.txt" "assets/shorthouse-b2-still.jpg" "assets/devhouse-field-workflow.webp" "assets/og/og-home.jpg" "assets/og/og-consulting.jpg" "assets/og/og-shorthouse.jpg" "assets/og/og-devhouse.jpg" "assets/og/og-privacy.jpg" "assets/og/og-production.jpg"; do
             url="https://elisoninc.com/$file"
             curl --fail --silent --show-error --location --retry 4 --retry-delay 3 --retry-connrefused --max-time 30 --output /dev/null "$url"
             echo "OK $url"
@@ -49,4 +49,8 @@ jobs:
             curl --fail --silent --show-error --location --output /tmp/page.html "https://elisoninc.com/$page"
             grep -q "assets/og/$image" /tmp/page.html
           done
-          echo "Live content, production services and all six OG assets verified"
+          curl --fail --silent --show-error --location --output /tmp/policy.html https://elisoninc.com/engagement.html
+          grep -q "First contact is not a contract" /tmp/policy.html
+          grep -q 'id="inquiry-ack"' /tmp/consult.html
+          grep -q 'href="engagement.html"' /tmp/consult.html
+          echo "Live content, client disclosures, inquiry protection and OG assets verified"
