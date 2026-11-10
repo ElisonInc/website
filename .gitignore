@@ -17,3 +17,19 @@ yarn-error.log
 # Build outputs (if we ever add a build step)
 dist/
 build/
+
+# Credentials, local config and private client material
+.env
+.env.*
+!.env.example
+*.pem
+*.p12
+*.pfx
+*.key
+credentials.json
+service-account.json
+client-data/
+private-client-assets/
+secrets/
+*.sqlite
+*.sqlite3
