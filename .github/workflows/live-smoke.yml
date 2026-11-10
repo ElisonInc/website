@@ -1,5 +1,9 @@
 name: Live site smoke test
 on:
+  push:
+    branches: [main]
+  schedule:
+    - cron: '17 15 * * 1'
   workflow_run:
     workflows: ["pages build and deployment"]
     types: [completed]
@@ -52,5 +56,6 @@ jobs:
           curl --fail --silent --show-error --location --output /tmp/policy.html https://elisoninc.com/engagement.html
           grep -q "First contact is not a contract" /tmp/policy.html
           grep -q 'id="inquiry-ack"' /tmp/consult.html
+          grep -q 'http-equiv="Content-Security-Policy"' /tmp/home.html
           grep -q 'href="engagement.html"' /tmp/consult.html
           echo "Live content, client disclosures, inquiry protection and OG assets verified"
