@@ -43,14 +43,15 @@ try {
   await page.screenshot({ path: "qa-screenshots/" + item.label + ".png", fullPage: true });
   // Audit WCAG rules in a separate testing context; bypassing CSP is only
   // for injecting the audit library, not for the functional site test above.
-  const auditPage = await browser.newPage({ viewport: { width: item.width, height: item.height }, bypassCSP: true });
+  const auditContext = await browser.newContext({ viewport: { width: item.width, height: item.height }, bypassCSP: true });
+  const auditPage = await auditContext.newPage();
   await auditPage.goto("http://127.0.0.1:8000" + item.path, { waitUntil: "domcontentloaded" });
   const audit = await new AxeBuilder({ page: auditPage }).withTags(["wcag2a", "wcag2aa", "wcag21a", "wcag21aa", "wcag22aa"]).analyze();
   for (const violation of audit.violations) {
     failures.push(item.label + ": accessibility " + violation.id + " (" + violation.impact + ") at " + violation.nodes.slice(0,2).map(n=>n.target.join(",")).join("; "));
   }
   console.log(item.label, "axe violations:", audit.violations.length);
-  await auditPage.close();
+  await auditContext.close();
   if (item.label === "consulting-desktop") {
     await page.route("https://formsubmit.co/ajax/info@elisoninc.com", async (route) => {
       await route.fulfill({ status: 200, contentType: "application/json", headers: { "access-control-allow-origin": "*" }, body: '{"success":"true"}' });
