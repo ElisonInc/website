@@ -2,6 +2,7 @@
 // Local visual smoke test: run from repository root with a server at 127.0.0.1:8000.
 // CI installs Playwright temporarily; production site has no dependency on it.
 import { chromium } from "playwright";
+import AxeBuilder from "@axe-core/playwright";
 import fs from "node:fs";
 
 fs.mkdirSync("qa-screenshots", { recursive: true });
@@ -40,6 +41,16 @@ try {
   if (result.h1Count !== 1) failures.push(item.label + ": expected one H1");
   for (const img of result.images) if (!img.ok) failures.push(item.label + ": image not loaded " + img.src);
   await page.screenshot({ path: "qa-screenshots/" + item.label + ".png", fullPage: true });
+  // Audit WCAG rules in a separate testing context; bypassing CSP is only
+  // for injecting the audit library, not for the functional site test above.
+  const auditPage = await browser.newPage({ viewport: { width: item.width, height: item.height }, bypassCSP: true });
+  await auditPage.goto("http://127.0.0.1:8000" + item.path, { waitUntil: "domcontentloaded" });
+  const audit = await new AxeBuilder({ page: auditPage }).withTags(["wcag2a", "wcag2aa", "wcag21a", "wcag21aa", "wcag22aa"]).analyze();
+  for (const violation of audit.violations) {
+    failures.push(item.label + ": accessibility " + violation.id + " (" + violation.impact + ") at " + violation.nodes.slice(0,2).map(n=>n.target.join(",")).join("; "));
+  }
+  console.log(item.label, "axe violations:", audit.violations.length);
+  await auditPage.close();
   if (item.label === "consulting-desktop") {
     await page.route("https://formsubmit.co/ajax/info@elisoninc.com", async (route) => {
       await route.fulfill({ status: 200, contentType: "application/json", headers: { "access-control-allow-origin": "*" }, body: '{"success":"true"}' });
