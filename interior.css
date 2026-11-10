@@ -152,3 +152,10 @@ body.consulting-page::before,body.interior-page::before{display:none}
 /* Small creative production cross-reference without another sales panel. */
 .consulting-page .consulting-creative-note{font-size:14px;line-height:1.7;color:var(--i-muted);max-width:830px;margin:25px 0 0}
 .consulting-page .consulting-creative-note a{color:var(--i-accent);text-underline-offset:4px}
+
+/* Clear but unobtrusive consent and pre-payment disclosures. */
+.consulting-page .rate-safeguard{font-size:13px;line-height:1.6;color:var(--i-muted)}
+.consulting-page .rate-safeguard a,.consulting-page .consulting-small a,.production-page .production-disclosure a{color:var(--i-accent);text-decoration:underline;text-underline-offset:3px}
+.consulting-page #inquiry-form .consent-check{display:flex;align-items:flex-start;gap:11px;margin:12px 0 10px;font:400 13px/1.55 Arial,sans-serif;cursor:pointer}
+.consulting-page #inquiry-form .consent-check span{color:var(--i-ink)}
+.consulting-page #inquiry-form input[type="checkbox"]{flex:none;width:19px!important;min-width:19px!important;height:19px!important;min-height:19px!important;margin:0!important;padding:0!important;accent-color:var(--i-accent);background:transparent}
