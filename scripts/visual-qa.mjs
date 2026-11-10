@@ -16,7 +16,9 @@ const checks = [
  { path: "/case-study-shorthouse.html", label: "case-study-desktop", width: 1440, height: 900 },
  { path: "/production.html", label: "production-desktop", width: 1440, height: 900 },
  { path: "/production.html", label: "production-mobile", width: 390, height: 844 },
- { path: "/privacy.html", label: "privacy-mobile", width: 390, height: 844 }
+ { path: "/privacy.html", label: "privacy-mobile", width: 390, height: 844 },
+ { path: "/engagement.html", label: "engagement-desktop", width: 1440, height: 900 },
+ { path: "/engagement.html", label: "engagement-mobile", width: 390, height: 844 }
 ];
 const failures = [];
 try {
@@ -45,6 +47,7 @@ try {
     await page.locator("#client-name").fill("Site QA");
     await page.locator("#client-email").fill("qa@example.com");
     await page.locator("#client-message").fill("Test only: simulated form submission, no real message sent.");
+    await page.locator("#inquiry-ack").check();
     await page.locator("#inquiry-form button[type=submit]").click();
     try {
       await page.getByRole("status").getByText("Your inquiry was submitted", { exact: false }).waitFor({ timeout: 3500 });
