@@ -1,80 +1,105 @@
 # Elison Inc. — Website
 
-Production source for **[elisoninc.com](https://elisoninc.com)**, the independent creative and technology company portfolio and consulting site.
+Source for **[elisoninc.com](https://elisoninc.com)**, the public site of Elison Inc., an independent creative and technology company. It presents the company's ventures, consulting services and video production work through Eclipse Studio.
 
-## Site map
+**Status:** Active. Deployed to GitHub Pages from `main`; most recent changes were made in November 2026.
+
+## Pages
 
 | Page | Purpose |
 | --- | --- |
-| `index.html` | Editorial homepage; flagship ventures, portfolio, R&D and founder |
-| `consulting.html` | Consulting scope, pricing, Calendly discovery, Stripe checkout and inquiry form |
-| `production.html` | Commercials, product videos, social ads and branded film production through Eclipse Studio |
+| `index.html` | Editorial homepage: flagship ventures, portfolio, R&D and founder |
+| `consulting.html` | Consulting scope, discovery booking, checkout and inquiry form |
+| `production.html` | Commercials, product videos and branded content through Eclipse Studio |
 | `case-study-shorthouse.html` | ShortHouse platform and B2 production project study |
 | `case-study-devhouse.html` | DevHouse AI workflow product study |
+| `engagement.html` | "Working Together": what to expect before an engagement, payments, rights and AI-assisted work |
 | `privacy.html` | Inquiry data handling and third-party services |
-| `engagement.html` | Client information about inquiries, payments, cancellation, rights and AI-assisted work |
 | `404.html` | Not-found page |
+
+## Featured on the site
+
+- **ShortHouse / B2**: platform preparing for launch, not yet commercial; B2 is in production.
+- **DevHouse AI**: AI workflow product, presented alongside consulting.
+- **ELISON / The Book of Eli**: independent music and film.
+- **SongSplit**: beta.
+- **RiftHouseStudio**: original games in development.
+- **OneTime Studios**: paused prototype.
+- **Eclipse AI**: agent-systems research and architecture.
+- **Eclipse Studio**: internal AI-assisted production workflow, also used for commissioned video work.
+
+Homepage imagery is original ShortHouse, DevHouse AI and ELISON artwork. It is representative and does not show delivered client results.
 
 ## Stack
 
-Static HTML, CSS and a small vanilla-JavaScript inquiry handler. Hosted on GitHub Pages with `CNAME` for `elisoninc.com`; no JavaScript framework, build tool or custom backend. Homepage uses `editorial.css`; the consulting and project pages use `interior.css` with legacy shared styles in `styles.css`.
+- Static HTML and CSS, plus a small vanilla-JavaScript inquiry handler (`inquiry.js`). No framework, no build step and no custom backend.
+- `editorial.css` styles the homepage. `interior.css` styles the interior pages, and `styles.css` holds older shared styles.
+- Hosted on GitHub Pages, with `CNAME` pointing to `elisoninc.com`.
+- Third-party services (form handling, scheduling, payments) are listed on `privacy.html`.
+- Each page sets a meta-tag Content Security Policy and a referrer policy. GitHub Pages does not allow custom HTTP security headers.
 
-Branding deliberately uses editorial type, warm paper colors and minimal ornamentation. Homepage project images are sourced from our original ShortHouse and DevHouse AI asset folders. These are representative artwork **not** examples of delivered client results.
+## Repository structure
 
-## Business and project status
-
-- **ShortHouse / B2** — platform in precommercial launch preparation; B2 is in production. Do not call it streaming or published without release approval.
-- **DevHouse AI** — consulting-facing product; do not invent case-study metrics or testimonials.
-- **ELISON / The Book of Eli** — independent music and film.
-- **SongSplit** — beta.
-- **RiftHouseStudio** — games in development.
-- **OneTime Studios** — paused prototype.
-- **Eclipse AI** — engineering and architecture research.
-- **Eclipse Studio** — internal creative production workflow for ShortHouse and commissioned commercials, product videos and branded content. Client production is quoted as a service, not offered as software.
-
-## Client protection and commercial terms
-
-- The public [Working Together](https://elisoninc.com/engagement.html) page explains pre-engagement expectations, privacy, revisions, payment, cancellation, IP rights and AI-assisted production. It is not an executed agreement.
-- Use the [client engagement checklist](docs/client-engagement-checklist.md) for every paid project. Have a qualified attorney review the actual master services agreement and statement of work.
-- No confidential client media, private customer data, passwords or credentials belong in this public repository or the inquiry form.
-- The inquiry form has a required, clearly labeled acknowledgment that it is not a booking and that sensitive material must not be submitted.
-- Static pages implement a limited meta-level Content Security Policy and referrer policy. **GitHub Pages does not provide us with configurable HTTP security response headers here**; verify site headers separately and assess edge hosting if stronger controls are required.
-- Do not claim compliance certification, enforceable liability limits, insurance coverage, trademark rights or signed client consent without actual evidence.
-
-## Lead capture and booking
-
-- The inquiry form in `consulting.html` submits via `inquiry.js` to FormSubmit and forwards to **info@elisoninc.com**. The receiving address must remain activated with FormSubmit.
-- Free discovery uses a **15-minute** Calendly event with limited date-specific windows, maintained as a rolling 30-day schedule; do not enable recurring weekly availability or broaden the calendar without approval.
-- Commercial and product video production is quoted separately based on creative brief, number of deliverables, platform formats, usage rights and revisions.
-- The **$200** one-time strategy consultation uses a live Stripe Payment Link, with automatic tax calculation enabled. Paying **does not** reserve a meeting time; the confirmation asks the client to email for scheduling.
-- Stripe Tax collection depends on actual tax registrations in applicable jurisdictions. Do not claim registrations or tax collection without verification.
-- Never store Stripe or API secret keys in this repo.
+```
+*.html, *.css, inquiry.js   Site pages, styles and form handler
+assets/                     Images; assets/og/ holds the Open Graph cards
+docs/                       Internal client-engagement checklist and draft agreement (not legal advice)
+scripts/check-site.mjs      Dependency-free static quality and credential gate
+scripts/visual-qa.mjs       Playwright responsive, keyboard and Axe accessibility checks
+scripts/generate-og.py      Pillow-based Open Graph card generator
+.github/workflows/          CI: site-qa, visual-qa, live-smoke, generate-og
+sitemap.xml, robots.txt, ads.txt, CNAME
+```
 
 ## Local development
+
+Serve the site:
 
 ```bash
 python3 -m http.server 8000
 ```
 
-Visit `http://localhost:8000` in a browser.
+Then open `http://localhost:8000`.
 
-Run dependency-free static checks:
+Run the static checks (Node 22, no install needed):
 
 ```bash
 node scripts/check-site.mjs
 ```
 
-The `.github/workflows/site-qa.yml` workflow also runs these checks on pushes and pull requests. Run a browser-based responsive and keyboard test after visible design changes; the static checker does not replace visual QA.
+These checks cover page metadata, CSP and referrer tags, local links and assets, alt text, sitemap coverage, JSON-LD validity and the inquiry acknowledgment. They also scan for secrets that look like common key formats.
 
-## Before calling a release complete
+Run the browser QA. It needs the local server above running on `127.0.0.1:8000`, and Playwright is installed only for testing:
 
-1. Check the live deployed URL in desktop and mobile browsers and ensure assets load.
-2. Confirm the form submits and an actual inquiry reaches the inbox.
-3. Confirm discovery booking shows only approved available hours.
-4. Confirm Stripe payment link details and tax configuration, without creating an unnecessary live charge.
-5. Check the sitemap, metadata, no broken links, accessibility and Google Search Console indexing where access is available.
-6. Verify the public disclosure pages, obtain real signed project terms and confirm rights to all third-party and AI-assisted output before publishing client work.
+```bash
+npm install --no-save playwright@1.56.1 @axe-core/playwright@4.10.2
+npx playwright install chromium
+node scripts/visual-qa.mjs   # screenshots go to qa-screenshots/
+```
+
+Regenerate the Open Graph cards (requires Pillow):
+
+```bash
+python3 scripts/generate-og.py
+```
+
+## Continuous integration
+
+| Workflow | When it runs | What it does |
+| --- | --- | --- |
+| `site-qa.yml` | Pushes to `main` and pull requests | Runs `check-site.mjs` |
+| `visual-qa.yml` | Pushes to `main` and manual runs | Runs the Playwright and Axe checks and uploads screenshots |
+| `live-smoke.yml` | After a Pages deploy, pushes to `main`, a weekly schedule and manual runs | Confirms the live pages, assets and client disclosures are being served |
+| `generate-og.yml` | Changes to the generator and manual runs | Rebuilds and commits the OG cards |
+
+## Content rules
+
+- Never commit credentials, API keys, confidential client media or private customer data.
+- Do not publish metrics, testimonials, release claims, certifications or legal claims without evidence.
+- After visible design changes, check the result in a real browser. The static checker does not replace visual QA.
 
 ## Ownership
 
-© 2026 Elison Inc. All rights reserved unless otherwise noted in project repositories.
+© 2026 Elison Inc. All rights reserved. No open-source licence file is included.
+
+Last reviewed: 2026-11-12
