@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; frame-src 'none'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self'; form-action 'self'">
+<meta name="robots" content="noindex, nofollow">
+<title>RiftHouse Studio: Roblox game art in progress | Elison Inc.</title>
+<meta name="description" content="Bosses, food props and creatures built by RiftHouse Studio at Elison Inc. for two Roblox games in development.">
+<meta name="theme-color" content="#14121a">
+<link rel="icon" type="image/svg+xml" href="../favicon.svg"><link rel="icon" href="../favicon.ico" sizes="any">
+<style>
+:root{--bg:#14121a;--card:#1e1b26;--ink:#f4f1ea;--mute:#b8b2c4;--accent:#ffcf3f;--hot:#ff5a4e}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Roboto,sans-serif}
+a{color:inherit}.wrap{max-width:1180px;margin:0 auto;padding:0 20px}
+header.top{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;padding:18px 20px;max-width:1180px;margin:0 auto}
+header.top a{text-decoration:none;font-weight:700;letter-spacing:.02em}header.top nav a{margin-left:16px;font-weight:500;color:var(--mute)}
+.hero{padding:48px 0 30px}.tag{color:var(--accent);font-weight:700;letter-spacing:.12em;text-transform:uppercase;font-size:13px;margin:0}
+h1{font-size:clamp(34px,6vw,64px);line-height:1.05;margin:10px 0 16px}h1 em{color:var(--accent);font-style:normal}
+.lede{max-width:720px;color:var(--mute);font-size:18px}.lede strong{color:var(--ink)}
+figure.hero-img{margin-top:28px;border-radius:18px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}.chips span{background:var(--card);border:1px solid #2e2a38;border-radius:99px;padding:6px 12px;font-size:14px;color:var(--mute)}
+section{padding:46px 0;border-top:1px solid #26222f}h2{font-size:clamp(26px,4vw,40px);margin:4px 0 10px}.intro{color:var(--mute);max-width:760px;margin-bottom:24px}
+.boss{background:var(--card);border-radius:18px;padding:22px;margin:22px 0}.boss h3{margin:0;font-size:26px}.boss .n{color:var(--hot);font-weight:700;font-size:13px;letter-spacing:.1em;text-transform:uppercase}.boss p{color:var(--mute);margin:6px 0 16px}
+.grid{display:grid;gap:12px;grid-template-columns:repeat(auto-fill,minmax(250px,1fr))}.grid.food{grid-template-columns:repeat(auto-fill,minmax(170px,1fr))}.grid.big{grid-template-columns:repeat(auto-fill,minmax(340px,1fr))}
+figure{margin:0;background:#0f0d14;border-radius:12px;overflow:hidden}figure img{width:100%;height:auto;display:block}figure.sq img{aspect-ratio:1/1;object-fit:cover}
+figcaption{padding:8px 12px;font-size:14px;color:var(--mute)}
+.timeline{list-style:none;padding:0;margin:0;display:grid;gap:12px}.timeline li{background:var(--card);border-radius:12px;padding:14px 16px;display:grid;grid-template-columns:110px 1fr;gap:12px}.timeline b{color:var(--accent)}
+.note{color:var(--mute);font-size:14px;margin-top:20px}footer{padding:30px 20px 50px;text-align:center;color:var(--mute);font-size:14px}footer a{margin:0 8px}
+@media(max-width:560px){.timeline li{grid-template-columns:1fr;gap:2px}.boss{padding:16px}.grid,.grid.big{grid-template-columns:1fr 1fr}.grid.big{grid-template-columns:1fr}header.top nav a{margin:0 12px 0 0}}
+</style>
+</head>
+<body>
+<header class="top"><a href="../index.html">Elison Inc.</a><nav aria-label="Sections"><a href="#bosses">Bosses</a><a href="#food">Food</a><a href="#creatures">Creatures</a><a href="#progress">Progress</a></nav></header>
+<main id="main" class="wrap">
+<section class="hero" style="border-top:0">
+<p class="tag">Elison Inc. / RiftHouse Studio / Roblox</p>
+<h1>Game art, <em>built in-house.</em></h1>
+<p class="lede">RiftHouse Studio is the Roblox game team at Elison Inc. This page shows the characters and props we have built so far for two games in development: <strong>Cómetelo!</strong>, a monster-eats-the-city game, and <strong>Something's Changed</strong>, a spot-the-difference horror game. Everything here is work in progress from our private test builds.</p>
+<div class="chips"><span>Blender modeling</span><span>Rigging and animation</span><span>Roblox Studio</span><span>Phone-first design</span></div>
+<figure class="hero-img"><a href="img/boss-lineup.jpg"><img src="img/boss-lineup.jpg" alt="The three Cómetelo! bosses next to a normal-size player (far right)" loading="lazy" decoding="async"></a><figcaption>The three Cómetelo! bosses next to a normal-size player (far right)</figcaption></figure>
+</section>
+<section id="bosses">
+<p class="tag">Cómetelo!</p>
+<h2>The bosses</h2>
+<p class="intro">Three rigged, animated bosses, each built to read instantly on a phone screen. Players grow by eating the city, then fight each boss until its health bar is empty before they can eat it.</p>
+<article class="boss"><span class="n">Boss 1</span><h3>Market Bully</h3><p>A furious street-market chef who swings a giant burger. The first boss players meet in the city.</p><div class="grid"><figure class=""><a href="img/MarketBully-front.jpg"><img src="img/MarketBully-front.jpg" alt="Front" loading="lazy" decoding="async"></a><figcaption>Front</figcaption></figure><figure class=""><a href="img/MarketBully-face-close-up.jpg"><img src="img/MarketBully-face-close-up.jpg" alt="Face close-up" loading="lazy" decoding="async"></a><figcaption>Face close-up</figcaption></figure><figure class=""><a href="img/MarketBully-attack-windup.jpg"><img src="img/MarketBully-attack-windup.jpg" alt="Attack wind-up" loading="lazy" decoding="async"></a><figcaption>Attack wind-up</figcaption></figure><figure class=""><a href="img/MarketBully-attack-impact.jpg"><img src="img/MarketBully-attack-impact.jpg" alt="Attack impact" loading="lazy" decoding="async"></a><figcaption>Attack impact</figcaption></figure><figure class=""><a href="img/MarketBully-defeated.jpg"><img src="img/MarketBully-defeated.jpg" alt="Defeated" loading="lazy" decoding="async"></a><figcaption>Defeated</figcaption></figure><figure class=""><a href="img/MarketBully-next-to-a-player-avatar.jpg"><img src="img/MarketBully-next-to-a-player-avatar.jpg" alt="Next to a player" loading="lazy" decoding="async"></a><figcaption>Next to a player</figcaption></figure><figure class=""><a href="img/MarketBully-in-the-city-game-camera.jpg"><img src="img/MarketBully-in-the-city-game-camera.jpg" alt="In the city, game camera" loading="lazy" decoding="async"></a><figcaption>In the city, game camera</figcaption></figure></div></article>
+<article class="boss"><span class="n">Boss 2</span><h3>Concrete Titan</h3><p>A walking construction site: cracked concrete, hazard stripes and a glowing furnace core.</p><div class="grid"><figure class=""><a href="img/ConcreteTitan-front.jpg"><img src="img/ConcreteTitan-front.jpg" alt="Front" loading="lazy" decoding="async"></a><figcaption>Front</figcaption></figure><figure class=""><a href="img/ConcreteTitan-face-close-up.jpg"><img src="img/ConcreteTitan-face-close-up.jpg" alt="Face close-up" loading="lazy" decoding="async"></a><figcaption>Face close-up</figcaption></figure><figure class=""><a href="img/ConcreteTitan-attack-windup.jpg"><img src="img/ConcreteTitan-attack-windup.jpg" alt="Attack wind-up" loading="lazy" decoding="async"></a><figcaption>Attack wind-up</figcaption></figure><figure class=""><a href="img/ConcreteTitan-attack-impact.jpg"><img src="img/ConcreteTitan-attack-impact.jpg" alt="Attack impact" loading="lazy" decoding="async"></a><figcaption>Attack impact</figcaption></figure><figure class=""><a href="img/ConcreteTitan-defeated.jpg"><img src="img/ConcreteTitan-defeated.jpg" alt="Defeated" loading="lazy" decoding="async"></a><figcaption>Defeated</figcaption></figure><figure class=""><a href="img/ConcreteTitan-next-to-a-player-avatar.jpg"><img src="img/ConcreteTitan-next-to-a-player-avatar.jpg" alt="Next to a player" loading="lazy" decoding="async"></a><figcaption>Next to a player</figcaption></figure><figure class=""><a href="img/ConcreteTitan-in-the-city-game-camera.jpg"><img src="img/ConcreteTitan-in-the-city-game-camera.jpg" alt="In the city, game camera" loading="lazy" decoding="async"></a><figcaption>In the city, game camera</figcaption></figure></div></article>
+<article class="boss"><span class="n">Boss 3</span><h3>Crown Devourer</h3><p>The king of the first world. Huge, royal and hungry, with a crown, fur cape and gold belly.</p><div class="grid"><figure class=""><a href="img/CrownDevourer-front.jpg"><img src="img/CrownDevourer-front.jpg" alt="Front" loading="lazy" decoding="async"></a><figcaption>Front</figcaption></figure><figure class=""><a href="img/CrownDevourer-face-close-up.jpg"><img src="img/CrownDevourer-face-close-up.jpg" alt="Face close-up" loading="lazy" decoding="async"></a><figcaption>Face close-up</figcaption></figure><figure class=""><a href="img/CrownDevourer-attack-windup.jpg"><img src="img/CrownDevourer-attack-windup.jpg" alt="Attack wind-up" loading="lazy" decoding="async"></a><figcaption>Attack wind-up</figcaption></figure><figure class=""><a href="img/CrownDevourer-attack-impact.jpg"><img src="img/CrownDevourer-attack-impact.jpg" alt="Attack impact" loading="lazy" decoding="async"></a><figcaption>Attack impact</figcaption></figure><figure class=""><a href="img/CrownDevourer-defeated.jpg"><img src="img/CrownDevourer-defeated.jpg" alt="Defeated" loading="lazy" decoding="async"></a><figcaption>Defeated</figcaption></figure><figure class=""><a href="img/CrownDevourer-next-to-a-player-avatar.jpg"><img src="img/CrownDevourer-next-to-a-player-avatar.jpg" alt="Next to a player" loading="lazy" decoding="async"></a><figcaption>Next to a player</figcaption></figure><figure class=""><a href="img/CrownDevourer-in-the-city-game-camera.jpg"><img src="img/CrownDevourer-in-the-city-game-camera.jpg" alt="In the city, game camera" loading="lazy" decoding="async"></a><figcaption>In the city, game camera</figcaption></figure></div></article>
+</section>
+<section id="food">
+<p class="tag">Cómetelo!</p>
+<h2>Food the monsters eat</h2>
+<p class="intro">Eleven food props modeled in Blender around a Latin street-food theme, each with a single material and kept light enough for phones. The burger came first and set the standard for the rest.</p>
+<div class="grid food"><figure class="sq"><a href="img/food-burger-front_three_quarter.jpg"><img src="img/food-burger-front_three_quarter.jpg" alt="Burger" loading="lazy" decoding="async"></a><figcaption>Burger</figcaption></figure><figure class="sq"><a href="img/food-taco.jpg"><img src="img/food-taco.jpg" alt="Taco" loading="lazy" decoding="async"></a><figcaption>Taco</figcaption></figure><figure class="sq"><a href="img/food-empanada.jpg"><img src="img/food-empanada.jpg" alt="Empanada" loading="lazy" decoding="async"></a><figcaption>Empanada</figcaption></figure><figure class="sq"><a href="img/food-donut.jpg"><img src="img/food-donut.jpg" alt="Donut" loading="lazy" decoding="async"></a><figcaption>Donut</figcaption></figure><figure class="sq"><a href="img/food-hotdog.jpg"><img src="img/food-hotdog.jpg" alt="Hot dog" loading="lazy" decoding="async"></a><figcaption>Hot dog</figcaption></figure><figure class="sq"><a href="img/food-churro.jpg"><img src="img/food-churro.jpg" alt="Churros" loading="lazy" decoding="async"></a><figcaption>Churros</figcaption></figure><figure class="sq"><a href="img/food-mango.jpg"><img src="img/food-mango.jpg" alt="Mango" loading="lazy" decoding="async"></a><figcaption>Mango</figcaption></figure><figure class="sq"><a href="img/food-mangoflor.jpg"><img src="img/food-mangoflor.jpg" alt="Mango flower" loading="lazy" decoding="async"></a><figcaption>Mango flower</figcaption></figure><figure class="sq"><a href="img/food-sodacup.jpg"><img src="img/food-sodacup.jpg" alt="Soda cup" loading="lazy" decoding="async"></a><figcaption>Soda cup</figcaption></figure><figure class="sq"><a href="img/food-pizzaslice.jpg"><img src="img/food-pizzaslice.jpg" alt="Pizza slice" loading="lazy" decoding="async"></a><figcaption>Pizza slice</figcaption></figure><figure class="sq"><a href="img/food-giantcake.jpg"><img src="img/food-giantcake.jpg" alt="Giant cake" loading="lazy" decoding="async"></a><figcaption>Giant cake</figcaption></figure></div>
+<h3 style="margin-top:30px">The burger from every side</h3>
+<div class="grid food"><figure class="sq"><a href="img/food-burger-front_three_quarter.jpg"><img src="img/food-burger-front_three_quarter.jpg" alt="Three-quarter" loading="lazy" decoding="async"></a><figcaption>Three-quarter</figcaption></figure><figure class="sq"><a href="img/food-burger-side.jpg"><img src="img/food-burger-side.jpg" alt="Side" loading="lazy" decoding="async"></a><figcaption>Side</figcaption></figure><figure class="sq"><a href="img/food-burger-top_down.jpg"><img src="img/food-burger-top_down.jpg" alt="Top" loading="lazy" decoding="async"></a><figcaption>Top</figcaption></figure></div>
+</section>
+<section id="creatures">
+<p class="tag">Something's Changed</p>
+<h2>The creatures</h2>
+<p class="intro">Concept turnarounds (front, side and back) for the three creatures that haunt the rooms in Something's Changed. The low-poly game models are built from these.</p>
+<div class="grid big"><figure class=""><a href="img/sc-concept-observer-turn-t3.jpg"><img src="img/sc-concept-observer-turn-t3.jpg" alt="Observer" loading="lazy" decoding="async"></a><figcaption>Observer</figcaption></figure><figure class=""><a href="img/sc-concept-mimic-turn-t2.jpg"><img src="img/sc-concept-mimic-turn-t2.jpg" alt="Mimic" loading="lazy" decoding="async"></a><figcaption>Mimic</figcaption></figure><figure class=""><a href="img/sc-concept-silhouette-turn-t2.jpg"><img src="img/sc-concept-silhouette-turn-t2.jpg" alt="Silhouette" loading="lazy" decoding="async"></a><figcaption>Silhouette</figcaption></figure></div>
+</section>
+<section id="progress">
+<p class="tag">Progress</p>
+<h2>Where things stand</h2>
+<ul class="timeline">
+<li><b>Nov 7, 2026</b><span>Full Cómetelo! game build begins: the city, growth stages, eating and SMASH.</span></li>
+<li><b>Nov 12</b><span>Burger approved; ten more food props modeled in Blender to the same standard.</span></li>
+<li><b>Nov 13</b><span>The three bosses built, rigged and animated. Creature art for Something's Changed.</span></li>
+<li><b>Nov 14</b><span>Boss fights with health bars and warning rings; a faster SMASH with a hit animation.</span></li>
+<li><b>Nov 15</b><span>Private playtests on phones. Both games are still in development and not yet public.</span></li>
+</ul>
+<p class="note">Questions about this work: <a href="mailto:info@elisoninc.com">info@elisoninc.com</a></p>
+</section>
+</main>
+<footer>© 2026 Elison Inc.<a href="../index.html">Home</a><a href="../consulting.html">Consulting</a><a href="../privacy.html">Privacy</a></footer>
+</body>
+</html>
