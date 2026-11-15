@@ -28,14 +28,25 @@
 .rh .timeline{list-style:none;padding:0;margin:0;display:grid;gap:10px}.rh .timeline li{background:var(--card);border:1px solid var(--line);border-radius:6px;padding:12px 16px;display:grid;grid-template-columns:110px 1fr;gap:12px}.rh .timeline b{color:var(--hot);font-family:var(--display)}
 .rh .note{color:var(--mute);font-size:.95rem;margin-top:1.2rem}
 @media(max-width:560px){.rh .timeline li{grid-template-columns:1fr;gap:2px}.rh .boss{padding:1rem}.rh .grid{grid-template-columns:1fr 1fr}.rh .grid.big{grid-template-columns:1fr}}
+
+.rh .rh-nav{position:sticky;top:0;z-index:50;background:rgba(244,241,234,.92);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.rh .rh-nav-in{max-width:76rem;margin:0 auto;padding:.7rem clamp(1rem,4vw,3rem);display:flex;align-items:center;gap:1.5rem}
+.rh .rh-brand{display:flex;flex-direction:column;line-height:1;text-decoration:none;color:var(--accent)}
+.rh .rh-brand b{font-family:var(--display);font-weight:900;font-size:1.4rem}.rh .rh-brand span{font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--hot);margin-top:3px;font-weight:600}
+.rh .rh-nav nav{display:flex;gap:1.4rem;margin-left:auto}.rh .rh-nav nav a{color:#2b2620;text-decoration:none;font-size:.98rem;padding:.3rem 0;border-bottom:2px solid transparent}.rh .rh-nav nav a:hover{border-color:var(--hot);color:var(--hot)}
+.rh .rh-cta,.rh .btn{background:var(--accent);color:#f4f1ea;text-decoration:none;padding:.6rem 1.1rem;border-radius:99px;font-weight:600;font-size:.95rem;white-space:nowrap;display:inline-block}.rh .rh-cta:hover,.rh .btn:hover{background:var(--hot)}
+.rh .btn.ghost{background:transparent;color:var(--accent);border:1.5px solid var(--accent)}.rh .btn.ghost:hover{background:var(--accent);color:#f4f1ea}
+.rh .play{background:var(--card);border:1px solid var(--line);border-radius:6px;padding:2rem}.rh .play .btns{display:flex;flex-wrap:wrap;gap:12px;margin-top:1.2rem}
+@media(max-width:760px){.rh .rh-nav-in{flex-wrap:wrap;gap:.6rem 1rem}.rh .rh-cta{margin-left:auto;padding:.5rem .9rem;font-size:.85rem}.rh .rh-nav nav{order:3;width:100%;margin:0;overflow-x:auto;gap:1.2rem;scrollbar-width:none}.rh .rh-nav nav::-webkit-scrollbar{display:none}.rh .rh-nav nav a{white-space:nowrap;font-size:.92rem}}
 </style>
 </head>
 <body class="interior-page rh">
 <a class="skip" href="#main">Skip to content</a>
-<header class="bar">
-<a class="bar-mark" href="../index.html" aria-label="Elison Inc. home">Elison Inc.</a>
-<nav aria-label="Main navigation"><a href="../index.html">Home</a><a href="#bosses">Bosses</a><a href="#food">Food</a><a href="#creatures">Creatures</a><a href="../consulting.html">Consulting</a><a href="mailto:info@elisoninc.com">Contact</a></nav>
-</header>
+<header class="rh-nav"><div class="rh-nav-in">
+<a class="rh-brand" href="../index.html" aria-label="Elison Inc. home"><b>Elison Inc.</b><span>RiftHouse Studios</span></a>
+<nav aria-label="Page sections"><a href="#bosses">Bosses</a><a href="#food">Food</a><a href="#creatures">Creatures</a><a href="#progress">Progress</a><a href="https://www.roblox.com/communities/706366660/RiftHouse-Studios" target="_blank" rel="noopener">Community</a></nav>
+<a class="rh-cta" href="#playtest">Become a playtester</a>
+</div></header>
 <main id="main" class="wrap">
 <section class="hero" style="border-top:0">
 <p class="tag">Elison Inc. / RiftHouse Studios / Roblox</p>
@@ -78,6 +89,7 @@
 </ul>
 <p class="note">Questions about this work: <a href="mailto:info@elisoninc.com">info@elisoninc.com</a></p>
 </section>
+<section id="playtest"><div class="wrap"><div class="play"><p class="tag">Play early</p><h2>Become a <em>playtester</em></h2><p class="intro">Both games are in private testing. Send us your Roblox username and we will add you to the next test, or join the RiftHouse Studios community on Roblox to follow along.</p><div class="btns"><a class="btn" href="mailto:info@elisoninc.com?subject=Playtest%20request%3A%20C%C3%B3metelo!%20%2F%20Something's%20Changed&body=Hi%20RiftHouse%2C%0A%0AI%20would%20like%20to%20playtest.%0ARoblox%20username%3A%20%0AGame%20(C%C3%B3metelo!%2C%20Something's%20Changed%20or%20both)%3A%20%0ADevice%20(phone%2C%20tablet%2C%20PC)%3A%20%0A">Request playtest access</a><a class="btn ghost" href="https://www.roblox.com/communities/706366660/RiftHouse-Studios" target="_blank" rel="noopener">Join the community on Roblox</a></div></div></div></section>
 </main>
 <footer class="foot"><p>© 2026 Elison Inc.</p><a href="../index.html">Home</a><a href="../consulting.html">Consulting</a><a href="../privacy.html">Privacy</a><a href="../engagement.html">Working together</a><a href="mailto:info@elisoninc.com">Contact</a></footer>
 </body>
