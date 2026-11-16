@@ -5,9 +5,10 @@
 <meta name="referrer" content="strict-origin-when-cross-origin">
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; frame-src 'none'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self' https://formsubmit.co; form-action 'self' https://formsubmit.co">
 <meta name="robots" content="noindex, nofollow">
-<title>RiftHouse Studios: Roblox game art in progress | Elison Inc.</title>
-<meta name="description" content="Bosses, food props and creatures by RiftHouse Studios with Elison Inc. for two Roblox games in development.">
+<title>RiftHouse Studios | Original Roblox Games in Development</title>
+<meta name="description" content="Two original Roblox worlds in development: Something’s Changed, an observation-horror mystery, and Cómetelo!, a chaotic city-eating adventure.">
 <meta name="theme-color" content="#f4f1ea">
+<meta property="og:type" content="website"><meta property="og:title" content="RiftHouse Studios | Two Original Roblox Worlds"><meta property="og:description" content="Explore Something’s Changed and Cómetelo!, two original Roblox games in development."><meta property="og:url" content="https://elisoninc.com/rifthouse/"><meta property="og:image" content="https://elisoninc.com/rifthouse/img/boss-lineup.jpg"><meta property="og:image:alt" content="Three Cómetelo! bosses standing beside a Roblox player avatar"><meta name="twitter:card" content="summary_large_image">
 <link rel="icon" type="image/svg+xml" href="../favicon.svg"><link rel="icon" href="../favicon.ico" sizes="any">
 <link rel="stylesheet" href="../styles.css?v=20261109-6">
 <link rel="stylesheet" href="../interior.css?v=20261109-3">
@@ -38,23 +39,47 @@
 .rh .btn.ghost{background:transparent;color:var(--accent);border:1.5px solid var(--accent)}.rh .btn.ghost:hover{background:var(--accent);color:#f4f1ea}
 .rh .play{background:var(--card);border:1px solid var(--line);border-radius:6px;padding:2rem}.rh .play .btns{display:flex;flex-wrap:wrap;gap:12px;margin-top:1.2rem}
 @media(max-width:760px){.rh .rh-nav-in{flex-wrap:wrap;gap:.6rem 1rem}.rh .rh-cta{margin-left:auto;padding:.5rem .9rem;font-size:.85rem}.rh .rh-nav nav{order:3;width:100%;margin:0;overflow-x:auto;gap:1.2rem;scrollbar-width:none}.rh .rh-nav nav::-webkit-scrollbar{display:none}.rh .rh-nav nav a{white-space:nowrap;font-size:.92rem}}
+
+.rh .hero{padding-top:clamp(3rem,7vw,6rem)}.rh .hero h1{max-width:17ch;font-size:clamp(3rem,8vw,6.5rem);letter-spacing:-.04em}
+.rh .hero .lede{max-width:52rem;line-height:1.7;font-size:clamp(1.05rem,2vw,1.25rem)}
+.rh .hero-actions,.rh .games-actions{display:flex;gap:12px;flex-wrap:wrap;margin:1.5rem 0}
+.rh .studio-stats{display:flex;flex-wrap:wrap;gap:.75rem;margin:1.8rem 0}.rh .studio-stats span{background:var(--card);border:1px solid var(--line);padding:.6rem 1rem;border-radius:5px}.rh .studio-stats strong{color:var(--hot)}
+.rh .game-showcase{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1.4rem;margin-top:1.8rem}
+.rh .game-tile{background:#fffdf8;border:1px solid var(--line);border-radius:9px;overflow:hidden;display:flex;flex-direction:column;box-shadow:0 14px 40px rgba(30,18,12,.06)}
+.rh .game-tile img{width:100%;aspect-ratio:16/10;object-fit:cover;display:block;background:#e9e2d6}.rh .game-copy{padding:clamp(1.2rem,3vw,2rem);display:flex;flex-direction:column;flex:1}
+.rh .game-tile h3{font-size:clamp(2rem,4vw,3rem);margin:.6rem 0}.rh .game-tile p{color:var(--mute);line-height:1.65}.rh .game-tile .games-actions{margin-top:auto;padding-top:.7rem}
+.rh .status{display:inline-block;border:1px solid var(--line);border-radius:99px;padding:.35rem .7rem;color:var(--hot);font-weight:800;letter-spacing:.08em;text-transform:uppercase;font-size:.76rem;width:max-content}
+.rh .editorial-panel{background:#efe8da;border:1px solid #d8cebd;border-radius:9px;padding:clamp(1.5rem,3vw,3rem)}.rh .editorial-panel .intro{line-height:1.7}
+.rh .section-kicker{font-weight:800;color:var(--hot);letter-spacing:.14em;text-transform:uppercase;font-size:.8rem}
+.rh #games,.rh #fashion,.rh #studio,.rh #playtest{scroll-margin-top:9rem}
+.rh a:focus-visible{outline:3px solid #8a2a1c;outline-offset:4px}
+@media(max-width:760px){.rh .game-showcase{grid-template-columns:1fr}.rh .hero h1{font-size:clamp(3rem,11vw,4.7rem)}.rh .studio-stats span{flex:1 1 9rem}}
+@media(prefers-reduced-motion:reduce){.rh *{scroll-behavior:auto!important}}
 </style>
 </head>
 <body class="interior-page rh">
 <a class="skip" href="#main">Skip to content</a>
 <header class="rh-nav"><div class="rh-nav-in">
 <a class="rh-brand" href="../index.html" aria-label="Elison Inc. home"><b>Elison Inc.</b><span>RiftHouse Studios</span></a>
-<nav aria-label="Page sections"><a href="#bosses">Bosses</a><a href="#food">Food</a><a href="#creatures">Creatures</a><a href="#progress">Progress</a><a href="https://www.roblox.com/communities/706366660/RiftHouse-Studios" target="_blank" rel="noopener">Community</a></nav>
+<nav aria-label="Page sections"><a href="#games">Our games</a><a href="#studio">Our process</a><a href="#fashion">What’s next</a><a href="#progress">Progress</a><a href="https://www.roblox.com/communities/706366660/RiftHouse-Studios" target="_blank" rel="noopener">Community</a></nav>
 <a class="rh-cta" href="#playtest">Become a playtester</a>
 </div></header>
 <main id="main" class="wrap">
 <section class="hero" style="border-top:0">
-<p class="tag">Elison Inc. / RiftHouse Studios / Roblox</p>
-<h1>Game art, <em>built in-house.</em></h1>
-<p class="lede">This page shows the characters and props built so far for two Roblox games in development at RiftHouse Studios, with Elison Inc.: <strong>Cómetelo!</strong>, a monster-eats-the-city game, and <strong>Something's Changed</strong>, a spot-the-difference horror game. Everything here is work in progress. Concept art is AI-assisted; the 3D models are built in Blender by our in-house pipeline.</p>
-<div class="chips"><span>Blender modeling</span><span>Rigging and animation</span><span>Roblox Studio</span><span>AI-assisted concepts</span><span>Phone-first design</span></div>
+<p class="tag">RiftHouse Studios / Original Roblox experiences</p>
+<h1>Enter worlds that <em>don’t play by the rules.</em></h1>
+<p class="lede">We’re building two very different Roblox games: <strong>Something’s Changed</strong>, an observation-horror mystery, and <strong>Cómetelo!</strong>, a chaotic, size-shifting city-eating adventure. Both are in development, with private testing underway and no public launch announced.</p>
+<div class="hero-actions"><a class="btn" href="#games">Explore the games</a><a class="btn ghost" href="#playtest">Request a playtest</a></div>
+<div class="studio-stats"><span><strong>2</strong> original games</span><span><strong>Independent</strong> game studio</span><span><strong>Pre-release</strong> development</span></div>
 <figure class="hero-img"><a href="img/boss-lineup.jpg"><img src="img/boss-lineup.jpg" alt="The three Cómetelo! bosses next to a normal-size player (far right)" width="1200" height="554" fetchpriority="high" loading="eager" decoding="async"></a><figcaption>The three Cómetelo! bosses next to a normal-size player (far right)</figcaption></figure>
 </section>
+<section id="games" aria-labelledby="games-heading"><p class="section-kicker">The games</p><h2 id="games-heading">Two worlds. <em>Different rules.</em></h2>
+<p class="intro">One challenges what you notice. The other asks how big you can get. Meet our two original Roblox projects.</p>
+<div class="game-showcase">
+<article class="game-tile"><img src="img/sc-concept-observer-turn-t1.jpg" alt="Front, side and rear concept views of the Observer creature" loading="lazy" decoding="async" width="1000" height="1000"><div class="game-copy"><span class="status">Psychological horror · In development</span><h3>Something’s Changed</h3><p>Memorize a normal room. Watch for what shifts. Find the anomaly as the world grows subtly stranger and something outside begins to watch.</p><p>At the center is the Observer, a mysterious presence. The creative vision includes warped environments, replayability, multiplayer encounters and alternate endings; those expanded features are not all launch-ready.</p><div class="games-actions"><a class="btn" href="#creatures">Meet the Observer</a><a class="btn ghost" href="#playtest">Follow development</a></div></div></article>
+<article class="game-tile"><img src="img/boss-lineup.jpg" alt="The three Cómetelo! bosses beside a normal-sized Roblox avatar" loading="lazy" decoding="async" width="1200" height="554"><div class="game-copy"><span class="status">Growth action · In development</span><h3>Cómetelo!</h3><p>Start small. Eat the city. Grow into a monster. Explore Puerto Bocado, devour food and scenery, increase your size and take on giant arena bosses.</p><p>Designed around touch-friendly controls, escalating scale and playful combat. Public release dates and purchases are not announced.</p><div class="games-actions"><a class="btn" href="#bosses">Meet the bosses</a><a class="btn ghost" href="#food">Explore the assets</a></div></div></article>
+</div></section>
+<section id="studio"><div class="editorial-panel"><p class="section-kicker">Behind the scenes</p><h2>Original worlds, <em>made in-house.</em></h2><p class="intro">RiftHouse develops games using an independent pipeline spanning Roblox Studio, Luau game systems, Blender assets, rigging and animation, and AI-assisted concept exploration. The galleries below document work in progress, not final gameplay footage.</p><div class="chips"><span>Game design & development</span><span>Roblox Studio & Luau</span><span>Blender modeling</span><span>Rigging & animation</span><span>Private QA</span><span>AI-assisted concepts</span></div></div></section>
 <section id="bosses">
 <p class="tag">Cómetelo!</p>
 <h2>The bosses</h2>
@@ -77,9 +102,10 @@
 <p class="intro">AI-assisted concept turnarounds (front, side and back) for the Observer and its two other forms, the Mimic and the Silhouette. The low-poly game models are built from these picks.</p>
 <div class="grid big"><figure class=""><a href="img/sc-concept-observer-turn-t1.jpg"><img src="img/sc-concept-observer-turn-t1.jpg" alt="Observer" loading="lazy" decoding="async"></a><figcaption>Observer</figcaption></figure><figure class=""><a href="img/sc-concept-mimic-turn-t1.jpg"><img src="img/sc-concept-mimic-turn-t1.jpg" alt="Mimic" loading="lazy" decoding="async"></a><figcaption>Mimic</figcaption></figure><figure class=""><a href="img/sc-concept-silhouette-turn-t2.jpg"><img src="img/sc-concept-silhouette-turn-t2.jpg" alt="Silhouette" loading="lazy" decoding="async"></a><figcaption>Silhouette</figcaption></figure></div>
 </section>
+<section id="fashion"><div class="editorial-panel"><p class="section-kicker">Future direction · Early exploration</p><h2>Beyond games: <em>digital identity.</em></h2><p class="intro">We’re exploring original avatar fashion and collectible digital identity that could connect to our games and community. External collaborations are only possibilities at this stage: no fashion deal, collection, product or release date has been confirmed.</p><p class="note">Our immediate focus remains building and testing the two games.</p></div></section>
 <section id="progress">
 <p class="tag">Progress</p>
-<h2>Where things stand</h2>
+<h2>Where things stand</h2><p class="intro">Selected development milestones, not a public release schedule. Mechanics, artwork and plans may change in testing.</p>
 <ul class="timeline">
 <li><b>Nov 7, 2026</b><span>Something's Changed full-game build begins.</span></li>
 <li><b>Nov 12</b><span>Cómetelo! burger approved; nine more food props modeled in Blender to the same standard.</span></li>
@@ -89,7 +115,7 @@
 </ul>
 <p class="note">Questions about this work: <a href="mailto:info@elisoninc.com">info@elisoninc.com</a></p>
 </section>
-<section id="playtest"><div class="wrap"><div class="play"><p class="tag">Play early</p><h2>Become a <em>playtester</em></h2><p class="intro">Both games are in private testing. Send us your Roblox username and we will add you to the next test, or join the RiftHouse Studios community on Roblox to follow along.</p><div class="btns"><a class="btn" href="mailto:info@elisoninc.com?subject=Playtest%20request%3A%20C%C3%B3metelo!%20%2F%20Something's%20Changed&body=Hi%20RiftHouse%2C%0A%0AI%20would%20like%20to%20playtest.%0ARoblox%20username%3A%20%0AGame%20(C%C3%B3metelo!%2C%20Something's%20Changed%20or%20both)%3A%20%0ADevice%20(phone%2C%20tablet%2C%20PC)%3A%20%0A">Request playtest access</a><a class="btn ghost" href="https://www.roblox.com/communities/706366660/RiftHouse-Studios" target="_blank" rel="noopener">Join the community on Roblox</a></div></div></div></section>
+<section id="playtest"><div class="wrap"><div class="play"><p class="tag">Play early</p><h2>Become a <em>playtester</em></h2><p class="intro">Both games are in pre-release development. To express interest in a private playtest, email your Roblox username, preferred game and device. Invitations are limited and not guaranteed. Join the Roblox community for updates.</p><div class="btns"><a class="btn" href="mailto:info@elisoninc.com?subject=Playtest%20request%3A%20C%C3%B3metelo!%20%2F%20Something's%20Changed&body=Hi%20RiftHouse%2C%0A%0AI%20would%20like%20to%20playtest.%0ARoblox%20username%3A%20%0AGame%20(C%C3%B3metelo!%2C%20Something's%20Changed%20or%20both)%3A%20%0ADevice%20(phone%2C%20tablet%2C%20PC)%3A%20%0A">Request playtest access</a><a class="btn ghost" href="https://www.roblox.com/communities/706366660/RiftHouse-Studios" target="_blank" rel="noopener">Join the community on Roblox</a></div></div></div></section>
 </main>
 <footer class="foot"><p>© 2026 Elison Inc.</p><a href="../index.html">Home</a><a href="../consulting.html">Consulting</a><a href="../privacy.html">Privacy</a><a href="../engagement.html">Working together</a><a href="mailto:info@elisoninc.com">Contact</a></footer>
 </body>
